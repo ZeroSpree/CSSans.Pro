@@ -2,6 +2,7 @@
 const gulp         = require('gulp');
 const autoprefixer = require('autoprefixer');
 const postcss      = require('gulp-postcss');
+const cssvariables = require('postcss-css-variables');
 const sass         = require('gulp-sass');
 const plumber      = require('gulp-plumber');
 const browsersync  = require('browser-sync').create();
@@ -43,6 +44,9 @@ function css() {
     .pipe(gulp.dest("./dist/css/"))
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(gulp.dest("./dist/css/"))
+    .pipe(rename({ suffix: ".ie" }))
+    .pipe(postcss([cssvariables]))
     .pipe(gulp.dest("./dist/css/"));
 }
 

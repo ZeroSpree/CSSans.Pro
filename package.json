@@ -26,5 +26,8 @@
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
     "gulp-sourcemaps": "^2.6.4"
+  },
+  "dependencies": {
+    "postcss-css-variables": "^0.11.0"
   }
 }

@@ -1,10 +1,12 @@
-[class^="cssans-"] {
+:root {
   --primary: 31, 51, 104;    // blue
   --secondary: 237, 21, 118; // pink
   --accent1: 43, 208, 247;   // light blue
   --accent2: 255, 92, 92;    // orange
   --accent3: 255, 216, 9;    // yellow
+}
 
+[class^="cssans-"] {
   line-height: 0;
   font-size: inherit;
   text-align: left;
