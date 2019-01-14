@@ -1,0 +1,61 @@
+[class^="cssans-"] {
+  --blue-light: rgb(43, 208, 247);
+  --blue: rgb(31, 51, 104);
+  --pink: rgb(237, 21, 118);
+  --pink-t: rgba(237, 21, 118, .4);
+  --yellow: rgb(255, 216, 9);
+  --purple: rgb(142, 35, 112);
+  --orange: rgb(255, 92, 92);
+
+  line-height: 0;
+  font-size: inherit;
+  display: inline-block;
+  position: relative;
+  width: 2em;
+  height: 3em;
+  margin-right: .1em;
+
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+  }
+}
+
+.cssans__word {
+  display: inline-block;
+  margin-top: .1em;
+
+  &:not(last-child) {
+    margin-right: 1em;
+  }
+}
+
+.cssans__accessible {
+  clip: rect(1px,1px,1px,1px);
+  clip-path: inset(1px);
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  position: absolute;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+}
+
+@import
+  // These styles are presentational only.
+  "presentation",
+
+  // CSSans styles
+  "lowercase",
+  "uppercase",
+  "numbers"
+;

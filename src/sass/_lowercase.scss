@@ -1,0 +1,472 @@
+.cssans {
+  // Letter 'a'
+  &-a {
+    &::before {
+      border: 1em solid var(--pink);
+      border-left-color: var(--blue-light);
+      border-radius: 50%;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      width: 1em;
+      height: 2em;
+      top: 0;
+      left: 1em;
+      background: var(--blue);
+      opacity: .6;
+    }
+  }
+
+  // Letter 'b'
+  &-b {
+    margin-top: 1em;
+
+    &::before {
+      background: var(--blue);
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+    }
+
+    &::after {
+      width: 1em;
+      height: 3em;
+      bottom: 1em;
+      background: var(--pink);
+      opacity: .54;
+    }
+  }
+
+  // Letter 'c'
+  &-c {
+    width: 1.7em;
+
+    &::before {
+      background: var(--blue);
+      width: 1em;
+      height: 2em;
+      border-top-left-radius: 1em;
+      border-bottom-left-radius: 1em;
+      z-index: 1;
+    }
+
+    &::after {
+      border: 1em solid transparent;
+      border-top-color: var(--pink);
+      border-bottom-color: var(--blue-light);
+      border-radius: 50%;
+    }
+  }
+
+  // Letter 'd'
+  &-d {
+    @extend .cssans-b;
+
+    &::after {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  // Letter 'e'
+  &-e {
+    &::before {
+      border: 1em solid var(--blue);
+      border-top-color: var(--pink);
+      border-right-color: transparent;
+      border-radius: 50%;
+      transform: rotate(45deg);
+      z-index: 1;
+    }
+
+    &::after {
+      border: 1em solid transparent;
+      border-bottom-color: var(--blue-light);
+      border-radius: 50%;
+    }
+  }
+
+  // Letter 'f'
+  &-f {
+    background: linear-gradient(90deg, var(--blue) 1em, transparent 1em) no-repeat;
+    background-size: 1em 2em;
+    margin-top: 1em;
+
+    &::before {
+      top: -1em;
+      border: 1em solid transparent;
+      border-top-color: var(--blue);
+      border-radius: 50%;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      top: -1em;
+      width: 1em;
+      height: 3em;
+      border-top-left-radius: 1em;
+      border-bottom-right-radius: 1em;
+      background: linear-gradient(0deg, var(--purple) 1em, var(--pink) 1em, var(--pink) 2em, var(--yellow) 2em);
+    }
+  }
+
+  // Letter 'g'
+  &-g {
+    background: linear-gradient(90deg, transparent 1em, var(--blue) 1em) no-repeat;
+    background-size: 2em 3em;
+
+    &::before {
+      background: var(--pink);
+      width: 2em;
+      height: 2em;
+      border-radius: 50%;
+      opacity: .6;
+    }
+
+    &::after {
+      border: 1em solid transparent;
+      border-bottom-color: var(--blue-light);
+      border-radius: 50%;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'h'
+  &-h {
+    background: linear-gradient(90deg, var(--blue-light) 2em, transparent 2em) no-repeat;
+    background-size: 2em 1em;
+    border-radius: 1em;
+    margin-top: 1em;
+
+    &::before {
+      background: linear-gradient(90deg, var(--orange) 1em, var(--blue) 1em) no-repeat;
+      height: 1em;
+      width: 2em;
+      top: 1em;
+    }
+
+    &::after {
+      background: var(--blue);
+      width: 1em;
+      height: 2em;
+      top: -1em;
+      opacity: .6;
+    }
+  }
+
+  // Letter 'i'
+  &-i {
+    width: 1em;
+
+    &::before {
+      background: var(--blue);
+      width: 1em;
+      height: 2em;
+    }
+  }
+
+  // Letter 'j'
+  &-j {
+    &::before {
+      background: linear-gradient(0deg, var(--orange) 1em, var(--pink) 1em, var(--pink) 2em, var(--blue) 2em);
+      width: 1em;
+      height: 3em;
+      border-bottom-right-radius: 1em;
+      right: 0;
+    }
+
+    &::after {
+      border: 1em solid transparent;
+      border-bottom-color: var(--blue-light);
+      border-radius: 50%;
+      bottom: 0;
+      z-index: 1;
+      transform: rotate(45deg);
+    }
+  }
+
+  // Letter 'k'
+  &-k {
+    background: linear-gradient(90deg, var(--blue) 1em, transparent 1em) no-repeat;
+    background-size: 1em 3em;
+    top: -1em;
+    margin-top: 1em;
+
+    &::after,
+    &::before {
+      width: 2em;
+      height: 1em;
+      background: var(--blue-light);
+      border-top-left-radius: 1em;
+      border-top-right-radius: 1em;
+      bottom: 0;
+      z-index: -1;
+    }
+
+    &::before {
+      bottom: 1em;
+      border-radius: 0 0 1em 1em;
+    }
+  }
+
+  // Letter 'l'
+  &-l {
+    width: 1em;
+    background: var(--blue);
+    border-bottom-left-radius: 1em;
+    top: -1em;
+    margin-top: 1em;
+  }
+
+  // Letter 'm'
+  &-m {
+    width: 3em;
+
+    &::before,
+    &::after {
+      width: 2em;
+      height: 2em;
+      background: linear-gradient(90deg, var(--pink) 1em, var(--blue) 1em) no-repeat;
+      border-top-right-radius: 1em;
+    }
+
+    &::after {
+      width: 1em;
+      right: 0;
+    }
+  }
+
+  // Letter 'n'
+  &-n {
+    &::before {
+      width: 2em;
+      height: 2em;
+      background: linear-gradient(90deg, var(--pink) 1em, var(--blue) 1em) no-repeat;
+      border-top-right-radius: 1em;
+    }
+  }
+
+  // Letter 'o'
+  &-o {
+    &::before {
+      width: 2em;
+      height: 2em;
+      background: var(--blue);
+      border-radius: 50%;
+    }
+  }
+
+  // Letter 'p'
+  &-p {
+    @extend .cssans-b;
+
+    margin-top: 0;
+
+    &::after {
+      top: 0;
+    }
+  }
+
+  // Letter 'q'
+  &-q {
+    @extend .cssans-d;
+
+    margin-top: 0;
+
+    &::before {
+      background: var(--blue-light);
+    }
+
+    &::after {
+      top: 0;
+    }
+  }
+
+  // Letter 'r'
+  &-r {
+    width: 1.7em;
+    background: linear-gradient(90deg, var(--pink-t) 1em, transparent) no-repeat;
+    background-size: 1em 1em;
+
+    &::before {
+      width: 1em;
+      height: 2em;
+      background: var(--blue);
+      border-radius: 1em 0 0 1em;
+      z-index: -1;
+    }
+
+    &::after {
+      border: 1em solid transparent;
+      border-top-color: var(--pink);
+      border-radius: 50%;
+      z-index: -2;
+    }
+  }
+
+  // Letter 's'
+  &-s {
+    &::after {
+      border: 1em solid transparent;
+      border-top-color: var(--blue-light);
+      border-left-color: var(--blue);
+      border-bottom-color: var(--orange);
+      border-radius: 50%;
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      border: 1em solid transparent;
+      border-top-color: var(--yellow);
+      border-right-color: var(--pink);
+      border-bottom-color: var(--blue-light);
+      border-radius: 50%;
+      transform: rotate(45deg);
+      bottom: 0;
+    }
+  }
+
+  // Letter 't'
+  &-t {
+    margin-top: 1em;
+
+    &::before {
+      width: 1em;
+      height: 1em;
+      background: var(--blue-light);
+      left: 1em;
+    }
+
+    &::after {
+      top: -1em;
+      width: 1em;
+      height: 3em;
+      border-bottom-left-radius: 1em;
+      background: linear-gradient(0deg, var(--orange) 1em, var(--pink) 1em, var(--pink) 2em, var(--blue) 2em);
+    }
+  }
+
+  // Letter 'u'
+  &-u {
+    &::before {
+      width: 2em;
+      height: 1em;
+      background: linear-gradient(90deg, var(--yellow), var(--yellow) 1em, var(--blue) 1em);
+    }
+
+    &::after {
+      width: 2em;
+      height: 1em;
+      background: var(--blue-light);
+      border-radius: 0 0 1em 1em;
+      top: 1em;
+    }
+  }
+
+  // Letter 'v'
+  &-v {
+    &::before {
+      width: 1em;
+      height: 2em;
+      border-radius: 0 1em;
+      background: var(--orange);
+      left: 0;
+    }
+
+    &::after {
+      width: 1em;
+      height: 2em;
+      border-radius: 1em 0;
+      background: var(--blue);
+      right: 0;
+    }
+  }
+
+  // Letter 'w'
+  &-w {
+    width: 1em;
+    margin-left: 1em;
+    margin-right: 1.1em;
+    background: linear-gradient(0deg, var(--blue-light), var(--blue-light) 1em);
+    background-repeat: no-repeat;
+    background-size: 1em 2em;
+    border-radius: 1em 1em 0 0;
+
+    @extend .cssans-v;
+
+    &::before {
+      left: -1em;
+    }
+
+    &::after {
+      right: -1em;
+    }
+  }
+
+  // Letter 'x'
+  &-x {
+    &::before {
+      width: 1em;
+      height: 2em;
+      background: linear-gradient(0deg, var(--blue), var(--blue) 1em, var(--pink) 1em);
+      border-radius: 0 1em 1em 0;
+    }
+
+    &::after {
+      width: 1em;
+      height: 2em;
+      background: linear-gradient(0deg, var(--pink), var(--pink) 1em, var(--blue) 1em);
+      border-radius: 1em 0 0 1em;
+      right: 0;
+    }
+  }
+
+  // Letter 'y'
+  &-y {
+    background: linear-gradient(90deg, var(--blue-light), var(--blue-light) 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: bottom left;
+    border-radius: 0 0 1em 1em;
+    top: -1em;
+
+    &::before {
+      width: 2em;
+      height: 1em;
+      top: 1em;
+      background: linear-gradient(90deg, var(--blue), var(--blue) 1em, var(--orange) 1em);
+    }
+
+    &::after {
+      width: 1em;
+      height: 2em;
+      border-bottom-right-radius: 1em;
+      background: var(--blue);
+      bottom: -1em;
+      right: 0;
+      opacity: .54;
+    }
+  }
+
+  // Letter 'z'
+  &-z {
+    &::before {
+      width: 2em;
+      height: 1em;
+      background: linear-gradient(90deg, var(--yellow), var(--yellow) 1em, var(--blue-light) 1em);
+      border-bottom-right-radius: 1em;
+    }
+
+    &::after {
+      width: 2em;
+      height: 1em;
+      background: linear-gradient(90deg, var(--blue), var(--blue) 1em, var(--pink) 1em);
+      border-top-left-radius: 1em;
+      top: 1em;
+    }
+  }
+}
+
+
