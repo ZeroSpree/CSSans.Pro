@@ -1,14 +1,13 @@
 [class^="cssans-"] {
-  --blue-light: rgb(43, 208, 247);
-  --blue: rgb(31, 51, 104);
-  --pink: rgb(237, 21, 118);
-  --pink-t: rgba(237, 21, 118, .4);
-  --yellow: rgb(255, 216, 9);
-  --purple: rgb(142, 35, 112);
-  --orange: rgb(255, 92, 92);
+  --primary: 31, 51, 104; //blue
+  --secondary: 237, 21, 118; // pink
+  --accent1: 43, 208, 247; // light blue
+  --accent2: 255, 92, 92; // orange
+  --accent3: 255, 216, 9; // yellow
 
   line-height: 0;
   font-size: inherit;
+  text-align: left;
   display: inline-block;
   position: relative;
   width: 2em;
