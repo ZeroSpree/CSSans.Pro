@@ -19,7 +19,7 @@
 
   // Letter 'b'
   &-b {
-    margin-top: 1em;
+    margin-top: 1.1em;
 
     &::before {
       background: RGB(var(--primary));
@@ -90,7 +90,7 @@
     background: linear-gradient(90deg, RGB(var(--primary)) 1em, transparent 1em) no-repeat;
     background-size: 1em 1em;
     background-position: 0em 1em;
-    margin-top: 1em;
+    margin-top: 1.1em;
 
     &::before {
       top: -1em;
@@ -136,7 +136,7 @@
     background: linear-gradient(90deg, RGB(var(--accent1)) 2em, transparent 2em) no-repeat;
     background-size: 2em 1em;
     border-radius: 1em;
-    margin-top: 1em;
+    margin-top: 1.1em;
 
     &::before {
       background: linear-gradient(90deg, RGB(var(--accent2)) 1em, RGB(var(--primary)) 1em) no-repeat;
@@ -189,7 +189,7 @@
     background: linear-gradient(90deg, RGB(var(--primary)) 1em, transparent 1em) no-repeat;
     background-size: 1em 3em;
     top: -1em;
-    margin-top: 1em;
+    margin-top: 1.1em;
 
     &::after,
     &::before {
@@ -214,7 +214,7 @@
     background: RGB(var(--primary));
     border-bottom-left-radius: 1em;
     top: -1em;
-    margin-top: 1em;
+    margin-top: 1.1em;
   }
 
   // Letter 'm'
@@ -327,7 +327,7 @@
 
   // Letter 't'
   &-t {
-    margin-top: 1em;
+    margin-top: 1.1em;
 
     &::before {
       width: 1em;

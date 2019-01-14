@@ -1,9 +1,9 @@
 [class^="cssans-"] {
-  --primary: 31, 51, 104; //blue
+  --primary: 31, 51, 104;    // blue
   --secondary: 237, 21, 118; // pink
-  --accent1: 43, 208, 247; // light blue
-  --accent2: 255, 92, 92; // orange
-  --accent3: 255, 216, 9; // yellow
+  --accent1: 43, 208, 247;   // light blue
+  --accent2: 255, 92, 92;    // orange
+  --accent3: 255, 216, 9;    // yellow
 
   line-height: 0;
   font-size: inherit;
@@ -13,6 +13,7 @@
   width: 2em;
   height: 3em;
   margin-right: .1em;
+  margin-top: .1em;
 
   &::after,
   &::before {
@@ -25,7 +26,6 @@
 
 .cssans__word {
   display: inline-block;
-  margin-top: .1em;
 
   &:not(last-child) {
     margin-right: 1em;
