@@ -7,12 +7,13 @@ const sass         = require('gulp-sass');
 const plumber      = require('gulp-plumber');
 const browsersync  = require('browser-sync').create();
 const sourcemaps   = require('gulp-sourcemaps');
-const cssnano      = require("cssnano");
-const rename       = require("gulp-rename");
+const cssnano      = require('cssnano');
+const rename       = require('gulp-rename');
+const run          = require('gulp-run');
 
 // BrowserSync
 const browserSyncConfig = {
-  server: true,
+  server: '_site/',
   ghostMode: true,
   logFileChanges: true,
   open: true,
@@ -73,15 +74,24 @@ function cssans() {
     .pipe(gulp.dest("./dist/cssans/"));
 }
 
+// Jekyll task
+function jekyll() {
+    return gulp.src('.').pipe(run('bundle exec jekyll build --config _config.yml,_config.dev.yml'));
+}
+
 // Watch files
 function watchFiles() {
   gulp.watch("./src/sass/**/*", gulp.parallel(css, cssans));
-  gulp.watch("./**/*.html", browserSyncReload);
+  gulp.watch(
+    [
+      "./_includes/**/*",
+      "./_layouts/**/*",
+    ],
+    gulp.series(jekyll, browserSyncReload)
+  );
 }
 
-const watch = gulp.parallel(watchFiles, css, cssans, browserSync);
+const watch = gulp.series(css, cssans, jekyll, gulp.parallel(watchFiles, browserSync));
 
-exports.css = css;
-exports.cssans = cssans;
 exports.default = watch;
 

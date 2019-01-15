@@ -1,0 +1,21 @@
+# Site settings
+title: CSSans - CSS font
+
+# Build settings
+baseurl: ""
+
+# TODO! update url if needed
+url: "https://cssans.art"
+is_production: true
+permalink: /:title/
+markdown: kramdown
+
+# Exclude files and folders from build
+# Jekyll automatically excludes directories prefixed by underscore e.g. _dirname
+exclude: ["node_modules",
+          "Gemfile",
+          "Gemfile.lock",
+          "gulpfile.js",
+          "package.json",
+          "package-lock.json",
+          "README.md"]

@@ -1,0 +1,7 @@
+# Used for templating.
+# Allows unminified scripts for dev environment in _includes/partials/scripts.html
+is_production: false
+
+# Root folder is always "/" regardless of production build settings.
+baseurl: ""
+url: "http://localhost:3000"
