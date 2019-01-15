@@ -1,10 +1,25 @@
 .cta {
   text-align: center;
-  margin: 200px 0;
+  margin-bottom: 75px;
   display: flex;
   justify-content: center;
 
-  .button:not(:last-child) {
-    margin-right: 50px;
+  .button {
+    display: block;
+    margin: 25px 25px 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  @include mq(md) {
+    margin: 125px 0 200px;
+
+    .button {
+      display: inline-block;
+    }
   }
 }
+
+

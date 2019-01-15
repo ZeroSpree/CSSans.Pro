@@ -1,0 +1,57 @@
+.footer {
+  background: $blue;
+  color: #fff;
+  padding: 150px 0;
+  margin-top: 150px;
+
+  .heading {
+    margin: 0 0 50px;
+    text-align: center;
+  }
+
+  &__cta {
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .button {
+    color: $blue-light;
+    border-color: $blue-light;
+    margin: 0 0 25px;
+
+    &--full {
+      background: $blue-light;
+      color: $blue;
+    }
+  }
+
+  &__credits {
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    font-size: 14px;
+    justify-content: space-around;
+
+    b {
+      position: relative;
+      font-size: 32px;
+      margin-bottom: 5px;
+      display: block;
+      margin-bottom: 8px;
+
+      &.design {
+        right: -5px;
+      }
+
+      &.code {
+        left: -5px;
+      }
+    }
+  }
+
+  @include mq(md) {
+    &__cta {
+      text-align: left;
+    }
+  }
+}

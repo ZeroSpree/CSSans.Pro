@@ -8,12 +8,21 @@
     color: $gray-dark;
     border-top: 1px solid $gray-dark;
     padding: 16px 0;
+    margin-bottom: 32px;
   }
 
   &--large {
-    font-size: 48px;
-    font-weight: 400;
-    margin: 75px 0 0;
+    font-size: 72px;
+    font-weight: bold;
+    margin: 75px 0;
+    line-height: 1;
+
+    em {
+      color: $gray-dark;
+      font-size: 34px;
+      font-style: normal;
+      font-weight: normal
+    }
   }
 }
 

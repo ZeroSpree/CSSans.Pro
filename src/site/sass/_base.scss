@@ -22,3 +22,13 @@ a {
     font-size: 72px;
   }
 }
+
+.align-right {
+  text-align: right;
+}
+
+@include mq(md) {
+  .align-md-right {
+    text-align: right;
+  }
+}
