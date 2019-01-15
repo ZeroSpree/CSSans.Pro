@@ -1,9 +1,9 @@
 :root {
-  --primary: 31, 51, 104;    // blue
-  --secondary: 237, 21, 118; // pink
-  --accent1: 43, 208, 247;   // light blue
-  --accent2: 255, 92, 92;    // orange
-  --accent3: 255, 216, 9;    // yellow
+  --cssans-primary: 31, 51, 104;    // blue
+  --cssans-secondary: 237, 21, 118; // pink
+  --cssans-accent1: 43, 208, 247;   // light blue
+  --cssans-accent2: 255, 92, 92;    // orange
+  --cssans-accent3: 255, 216, 9;    // yellow
 }
 
 [class^="cssans-"] {
@@ -21,15 +21,17 @@
   &::before {
     content: '';
     position: absolute;
-    width: 0;
-    height: 0;
   }
 }
 
 .cssans__word {
   display: inline-block;
 
-  &:not(last-child) {
+  // Fix for letters that use z-index: -1 over a background color.
+  position: relative;
+  z-index: 1;
+
+  &:not(:last-child) {
     margin-right: 1em;
   }
 }
@@ -52,9 +54,6 @@
 }
 
 @import
-  // These styles are presentational only.
-  "presentation",
-
   // CSSans styles
   "lowercase",
   "uppercase",

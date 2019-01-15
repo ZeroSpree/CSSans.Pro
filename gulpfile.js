@@ -36,28 +36,52 @@ function browserSyncReload(done) {
 // CSS task
 function css() {
   return gulp
-    .src("./src/sass/**/*.scss")
+
+     // Dev version
+    .src("./src/sass/app/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./dist/css/"))
+    .pipe(gulp.dest("./dist/app/"))
+
+     // Prod version
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest("./dist/css/"))
+    .pipe(gulp.dest("./dist/app/"))
+}
+
+// CSSans task
+function cssans() {
+  return gulp
+     // Dev version
+    .src("./src/sass/cssans/**/*.scss")
+    .pipe(sourcemaps.init())
+    .pipe(plumber())
+    .pipe(sass({ outputStyle: "expanded" }))
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest("./dist/cssans/"))
+
+     // Prod version
+    .pipe(rename({ suffix: ".min" }))
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(gulp.dest("./dist/cssans/"))
+
+     // IE version (doesn't support CSS vars)
     .pipe(rename({ suffix: ".ie" }))
     .pipe(postcss([cssvariables]))
-    .pipe(gulp.dest("./dist/css/"));
+    .pipe(gulp.dest("./dist/cssans/"));
 }
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./src/sass/**/*", css);
+  gulp.watch("./src/sass/**/*", gulp.parallel(css, cssans));
   gulp.watch("./**/*.html", browserSyncReload);
 }
 
-const watch = gulp.parallel(watchFiles, css, browserSync);
+const watch = gulp.parallel(watchFiles, css, cssans, browserSync);
 
 exports.css = css;
+exports.cssans = cssans;
 exports.default = watch;
 
