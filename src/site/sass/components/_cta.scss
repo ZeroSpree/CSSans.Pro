@@ -1,0 +1,10 @@
+.cta {
+  text-align: center;
+  margin: 200px 0;
+  display: flex;
+  justify-content: center;
+
+  .button:not(:last-child) {
+    margin-right: 50px;
+  }
+}

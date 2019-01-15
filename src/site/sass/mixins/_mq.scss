@@ -1,0 +1,27 @@
+/*
+ * Media query shorthand, to be used with variables from $site-breakpoints
+ * Defaults to min-width
+ * 
+ * Usage: @include mq(lg, min/max(optional) ) { ... }
+ */
+
+@function breakpoint-min($name, $breakpoints: $site-breakpoints) {
+  $min: map-get($breakpoints, $name);
+  @return if($min != 0, $min, null);
+}
+
+@mixin mq($name, $type: min) {
+  $min: breakpoint-min($name);
+
+  @if $min {
+    @if $type == max {
+        $min: $min - 1px;
+    }
+
+    @media ( #{$type}-width: $min ) {
+      @content;
+    }
+  } @else {
+    @content;
+  }
+}

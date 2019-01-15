@@ -1,0 +1,17 @@
+@mixin wrapper() {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width: $site-max-width;
+
+  @each $name, $size in $site-gutter {
+    @include mq($name) {
+        padding-left: $size;
+        padding-right: $size;
+    }
+  }
+}
+
+.wrapper {
+  @include wrapper();
+}

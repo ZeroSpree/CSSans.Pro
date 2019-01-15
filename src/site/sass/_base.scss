@@ -1,11 +1,24 @@
-* {
-  box-sizing: border-box;
+body, html {
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+  font-size: 18px;
 }
 
-body, html {
-  margin: 0;
-  font-size: 18px;
-  max-width: 1200px;
-  margin: 0 auto;
-  font-family: sans-serif;
+a {
+  text-decoration: none;
+}
+
+#code {
+  display: none;
+}
+
+.cssans {
+  &--small {
+    font-size: 12px;
+  }
+  &--medium {
+    font-size: 32px;
+  }
+  &--large {
+    font-size: 72px;
+  }
 }

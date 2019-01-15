@@ -1,0 +1,27 @@
+/*
+ * Generate grid rows
+ * 
+ * $row-class defines the row classname. E.G. .row
+ * $column-gutter sets the negative margins for each defined breakpoint.
+ * 
+ */
+
+@mixin row-gutters($gutter) {
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter / -2);
+}
+
+@mixin row () {
+  display: flex;
+  flex-wrap: wrap;
+
+  @each $breakpoint, $gutter in $column-gutter {
+    @include mq($breakpoint) {
+      @include row-gutters($gutter);
+    }
+  }
+}
+
+#{$row-class} {
+  @include row();
+}

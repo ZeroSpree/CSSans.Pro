@@ -1,0 +1,19 @@
+.heading {
+  margin: 0;
+
+  &--small {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: $gray-dark;
+    border-top: 1px solid $gray-dark;
+    padding: 16px 0;
+  }
+
+  &--large {
+    font-size: 48px;
+    font-weight: 400;
+    margin: 75px 0 0;
+  }
+}
+

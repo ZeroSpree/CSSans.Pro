@@ -1,0 +1,40 @@
+$white: rgb(255, 255, 255);
+$blue: rgb(31, 51, 104);
+$pink: rgb(237, 21, 118);
+$blue-light: rgb(43, 208, 247);
+$orange: rgb(255, 92, 92);
+$yellow: rgb(255, 216, 9);
+$gray-dark: rgb(80, 80, 80);
+
+$site-max-width: 1328px;
+
+$row-class: '.row';
+$column-class: '.col';
+$column-count : 12;
+
+// Global site breakpoints
+// (!) Rememeber to edit $site-gutter and $grid-gutter as well
+$site-breakpoints : (
+  sm: 0px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+// Left-right spacings for site container
+// (!) keys must match $site-breakpoints
+$site-gutter : (
+  sm: 20px,
+  md: 32px,
+  lg: 64px,
+  xl: 64px
+);
+
+// Columns gutter spacings
+// (!) keys must match $site-breakpoints
+$column-gutter : (
+  sm: 8px,
+  md: 32px,
+  lg: 48px,
+  xl: 64px
+);

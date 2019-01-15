@@ -2,9 +2,30 @@
 <html lang="en">
     {% include head.html %}
     <body>
-        {% include playground.html %}
+        <main class="wrapper">
+            {% include playground.html %}
 
-        <div class="cssans">abcdefghijklmnopqrstuvwxyz</div>
+            <div class="row cta">
+                <div class="col">
+                    <a class="button button--xl" href="#documentation">Documentation</a>
+                    <a class="button button--xl button--full" href="https://github.com/ZeroSpree/CSSans.Pro" target="_blank">Start using</a>
+                </div>
+                <div class="col">
+                    <h1 class="heading heading--large">CSSans Pro - the flexible CSS font.</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-4">
+                    <h2 class="heading heading--small">Glyph</h2>
+                    <div class="cssans cssans--large">s</div>
+                </div>
+                <div class="col-8">
+                    <h2 class="heading heading--small">Characters</h2>
+                    <div class="cssans">abcdefghijklmnopqrstuvwxyz</div>
+                </div>
+            </div>
+        </main>
 
         {% include scripts.html %}
     </body>

@@ -1,0 +1,48 @@
+/*
+ * Generate grid cols
+ * 
+ */
+
+@mixin grid-col-padding ($gutter) {
+  padding-left: $gutter / 2;
+  padding-right: $gutter / 2;
+  /*
+   * Default columns align left width smallest width
+   */
+  flex: 0 0 auto;
+}
+
+@mixin grid-col-flex ($size) {
+  width: percentage($size / $column-count);
+  max-width: percentage($size / $column-count);
+  flex: 0 0 percentage($size / $column-count);
+}
+
+// generate paddings
+@each $breakpoint, $gutter in $column-gutter {
+  @include mq($breakpoint) {
+    #{$row-class} > * {
+      @include grid-col-padding($gutter);
+    }
+  }
+}
+
+// generate flex styles
+@each $breakpoint, $size in $site-breakpoints {
+  @include mq($breakpoint) {
+
+    $index: index($site-breakpoints, $breakpoint $size);
+
+    @for $i from 1 through $column-count {
+      // ignore first breakpoint class, e.g. .col instead of .col-sm
+      $className : if( $index > 1, 
+                       #{$column-class}-#{$breakpoint}-#{$i}, 
+                       #{$column-class}-#{$i} );
+
+      #{$className} {
+        @include grid-col-flex($i);
+      }
+    }
+
+  }
+}
