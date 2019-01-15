@@ -1,11 +1,8 @@
 # Site settings
 title: "CSSans.Pro - The CSS font"
 
-# Build settings
-baseurl: ""
-
-# TODO! update url if needed
-url: "https://cssans.art"
+url: "zerospree.github.io"
+baseurl: "CSSans.Pro"
 is_production: true
 permalink: /:title/
 markdown: kramdown

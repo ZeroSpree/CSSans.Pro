@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
 
     {% if site.is_production %}
-        <link type="text/css" rel="stylesheet" href="/dist/cssans/css/cssans.min.css" />
-        <link type="text/css" rel="stylesheet" href="/dist/site/css/main.min.css" />
+        <link type="text/css" rel="stylesheet" href="{{ "dist/cssans/css/cssans.min.css" | relative_url }}" />
+        <link type="text/css" rel="stylesheet" href="{{ "dist/site/css/main.min.css" | relative_url }}" />
     {% else %}
-        <link type="text/css" rel="stylesheet" href="/dist/cssans/css/cssans.css" />
-        <link type="text/css" rel="stylesheet" href="/dist/site/css/main.css" />
+        <link type="text/css" rel="stylesheet" href="{{ "dist/cssans/css/cssans.css" | relative_url }}" />
+        <link type="text/css" rel="stylesheet" href="{{ "dist/site/css/main.css" | relative_url }}" />
     {% endif %}
 </head>

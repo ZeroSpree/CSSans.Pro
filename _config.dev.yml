@@ -4,4 +4,4 @@ is_production: false
 
 # Root folder is always "/" regardless of production build settings.
 baseurl: ""
-url: "http://localhost:3000"
+url: "http://localhost:3000/"
