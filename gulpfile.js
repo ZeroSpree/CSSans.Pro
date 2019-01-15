@@ -39,39 +39,39 @@ function css() {
   return gulp
 
      // Dev version
-    .src("./src/sass/app/**/*.scss")
+    .src("./src/site/sass/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./dist/app/"))
+    .pipe(gulp.dest("./dist/site/css/"))
 
      // Prod version
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest("./dist/app/"))
+    .pipe(gulp.dest("./dist/site/css/"))
 }
 
 // CSSans task
 function cssans() {
   return gulp
      // Dev version
-    .src("./src/sass/cssans/**/*.scss")
+    .src("./src/cssans/sass/**/*.scss")
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./dist/cssans/"))
+    .pipe(gulp.dest("./dist/cssans/css/"))
 
      // Prod version
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest("./dist/cssans/"))
+    .pipe(gulp.dest("./dist/cssans/css/"))
 
      // IE version (doesn't support CSS vars)
     .pipe(rename({ suffix: ".ie" }))
     .pipe(postcss([cssvariables]))
-    .pipe(gulp.dest("./dist/cssans/"));
+    .pipe(gulp.dest("./dist/cssans/css/"));
 }
 
 // Jekyll task
