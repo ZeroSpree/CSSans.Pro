@@ -19,7 +19,8 @@ const browserSyncConfig = {
   open: true,
   port: 3000,
   files: [
-    './src/sass/**/*.scss'
+    './src/cssans/sass/**/*.scss',
+    './src/site/sass/**/*.scss'
   ],
 }
 
@@ -45,11 +46,13 @@ function css() {
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./dist/site/css/"))
+    .pipe(gulp.dest("./_site/dist/site/css/"))
 
      // Prod version
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp.dest("./dist/site/css/"))
+    .pipe(gulp.dest("./_site/dist/site/css/"));
 }
 
 // CSSans task
@@ -62,16 +65,19 @@ function cssans() {
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./dist/cssans/css/"))
+    .pipe(gulp.dest("./_site/dist/cssans/css/"))
 
      // Prod version
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(gulp.dest("./dist/cssans/css/"))
+    .pipe(gulp.dest("./_site/dist/cssans/css/"))
 
      // IE version (doesn't support CSS vars)
     .pipe(rename({ suffix: ".ie" }))
     .pipe(postcss([cssvariables]))
-    .pipe(gulp.dest("./dist/cssans/css/"));
+    .pipe(gulp.dest("./dist/cssans/css/"))
+    .pipe(gulp.dest("./_site/dist/cssans/css/"));
 }
 
 // Jekyll task
@@ -81,7 +87,8 @@ function jekyll() {
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./src/sass/**/*", gulp.parallel(css, cssans));
+  gulp.watch("./src/site/sass/**/*", css);
+  gulp.watch("./src/cssans/sass/**/*", cssans);
   gulp.watch(
     [
       "./_includes/**/*",
