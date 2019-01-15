@@ -1,5 +1,5 @@
 {
-  "name": "cssans",
+  "name": "CSSans.Pro",
   "version": "1.0.0",
   "description": "The CSS font",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ZeroSpree/CSSans.git"
+    "url": "git+https://github.com/ZeroSpree/CSSans.Pro.git"
   },
   "author": "Codrin Pavel",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ZeroSpree/CSSans/issues"
+    "url": "https://github.com/ZeroSpree/CSSans.Pro/issues"
   },
-  "homepage": "https://github.com/ZeroSpree/CSSans#readme",
+  "homepage": "https://github.com/ZeroSpree/CSSans.Pro#readme",
   "devDependencies": {
     "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",
