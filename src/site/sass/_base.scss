@@ -4,6 +4,12 @@ body, html {
   background: #fdfdfd;
 }
 
+main,
+footer,
+header {
+  display: block;
+}
+
 #code {
   display: none;
 }

@@ -14,6 +14,12 @@
     }
   }
 
+  // Fix IE11 centered alignment
+  .wrapper {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
   @include mq(md) {
     &__cta {
       text-align: left;
