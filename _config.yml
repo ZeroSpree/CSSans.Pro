@@ -1,14 +1,12 @@
-# Site settings
-title: "CSSans.Pro - The CSS font"
-
+title: "CSSans Pro - The flexbile CSS font"
 url: "zerospree.github.io"
 baseurl: "CSSans.Pro"
 is_production: true
+filesize: 9
+
 permalink: /:title/
 markdown: kramdown
 
-# Exclude files and folders from build
-# Jekyll automatically excludes directories prefixed by underscore e.g. _dirname
 exclude: ["node_modules",
           "Gemfile",
           "Gemfile.lock",
