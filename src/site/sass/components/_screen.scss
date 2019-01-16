@@ -1,0 +1,26 @@
+.screen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  min-height: 600px;
+
+  &__cta {
+    text-align: center;
+
+    > :not(:last-child) .button {
+      margin-bottom: 25px;
+    }
+  }
+
+  @include mq(md) {
+    &__cta {
+      text-align: left;
+
+      > :not(:last-child) .button {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

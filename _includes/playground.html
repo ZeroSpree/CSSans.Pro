@@ -1,37 +1,43 @@
+{%- assign fieldProps = 'autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"' -%}
+
 <div class="playground">
     <div class="playground__controls">
         <div class="row">
             <div class="col-12 col-md-4 playground__controls-text">
                 <label data-title="Type here to preview text">
-                    <input id="ctrl-text" type="text" value="cssans pro" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" />
+                    <input id="ctrl-text" type="text" value="cssans pro" {{ fieldProps }} />
                 </label>
             </div>
+
             <div class="col-8 col-md-4">
                 <label class="color" data-title="Color: --cssans-primary">
-                    <input data-variable="--cssans-primary" data-rgb="31, 51, 104" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="1f3368" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly="true" />
+                    <input data-variable="--cssans-primary" data-rgb="31, 51, 104" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="1f3368" readonly="true" {{ fieldProps }} />
                 </label>
                 <label class="color" data-title="Color: --cssans-secondary">
-                    <input data-variable="--cssans-secondary" data-rgb="237, 21, 118" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ed1576" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly="true" />
+                    <input data-variable="--cssans-secondary" data-rgb="237, 21, 118" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ed1576" readonly="true" {{ fieldProps }} />
                 </label>
                 <label class="color" data-title="Color: --cssans-accent1">
-                    <input data-variable="--cssans-accent1" data-rgb="43, 208, 247" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="2bd0f7" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly="true" />
+                    <input data-variable="--cssans-accent1" data-rgb="43, 208, 247" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="2bd0f7" readonly="true" {{ fieldProps }} />
                 </label>
                 <label class="color" data-title="Color: --cssans-accent2">
-                    <input data-variable="--cssans-accent2" data-rgb="255, 92, 92" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ff5c5c" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly="true" />
+                    <input data-variable="--cssans-accent2" data-rgb="255, 92, 92" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ff5c5c" readonly="true" {{ fieldProps }} />
                 </label>
                 <label class="color" data-title="Color: --cssans-accent3">
-                    <input data-variable="--cssans-accent3" data-rgb="255, 216, 9" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ffd809" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" readonly="true" />
+                    <input data-variable="--cssans-accent3" data-rgb="255, 216, 9" class="jscolor {position:'top', onFineChange:'cssans.setColor(this)'}" value="ffd809" readonly="true" {{ fieldProps }} />
                 </label>
             </div>
+
             <div class="col-4 playground__controls-size">
                 <label data-title="Font size">
-                    <input id="ctrl-fontsize" type="range" min="10" max="72" value="40" />
+                    <input id="ctrl-fontsize" type="range" min="10" max="72" value="47" />
                 </label>
             </div>
         </div>
     </div>
 
-    <div id="playground"></div>
+    <div class="playground__container">
+        <div id="playground"></div>
+    </div>
 </div>
 
 <pre id="code"></pre>

@@ -12,9 +12,28 @@
   }
 
   &--large {
-    font-size: 72px;
+    font-size: 56px;
     font-weight: bold;
     line-height: 1;
+
+    em {
+      display: block;
+      margin-top: 12px;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: normal
+    }
+  }
+
+  @include mq(md) {
+    &--large {
+      font-size: 72px;
+
+      em {
+        font-size: 32px;
+        margin-top: 32px;
+      }
+    }
   }
 }
 

@@ -66,6 +66,13 @@
     max-width: 100%;
   }
 
+  &__container {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   #playground {
     padding: 2em 16px;
     border-top: 0;

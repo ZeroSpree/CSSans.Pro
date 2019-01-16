@@ -2,4 +2,16 @@
   > div {
     padding-bottom: 32px;
   }
+
+  .cssans {
+    &--small {
+      font-size: 12px;
+    }
+    &--medium {
+      font-size: 32px;
+    }
+    &--large {
+      font-size: 72px;
+    }
+  }
 }
