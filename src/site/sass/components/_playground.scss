@@ -3,6 +3,24 @@
   border: 1px solid #eee;
   border-radius: 10px 10px 0 0;
 
+  &__controls {
+    justify-content: space-between;
+    align-items: center;
+    background: #efefef;
+    border-bottom: 1px solid #eee;
+    padding: 0 8px;
+    border-radius: 10px 10px 0 0;
+
+    .row > div {
+      padding-top: 16px;
+      padding-bottom: 16px;
+
+      &:last-child {
+        text-align: right;
+      }
+    }
+  }
+
   input,
   button {
     border: 0;
@@ -15,25 +33,6 @@
   button {
     background: 0;
     cursor: pointer;
-  }
-
-  &__controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #efefef;
-    border-bottom: 1px solid #eee;
-    padding: 0 8px;
-    border-radius: 10px 10px 0 0;
-
-    > div {
-      width: 33.33333%;
-      padding: 16px 8px;
-
-      &:last-child {
-        text-align: right;
-      }
-    }
   }
 
   [data-title] {
@@ -83,10 +82,8 @@
     font-size: 0;
   }
 
-  .ctrl-align {
-    &.is-active {
-      color: #2BD0F7;
-    }
+  #ctrl-fontsize {
+    max-width: 100%;
   }
 
   #playground {
@@ -95,10 +92,22 @@
     text-align: center;
     zoom: .5;
   }
-  
+
   @include mq(md) {
     #playground {
       zoom: 1;
+    }
+
+    &__controls {
+      padding: 0 16px;
+
+      &-text {
+        order: 1;
+      }
+
+      &-size {
+        order: 2;
+      }
     }
   }
 }
