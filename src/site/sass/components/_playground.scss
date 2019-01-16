@@ -1,7 +1,10 @@
 .playground {
-  margin-top: 200px;
+  margin-top: -100px;
+  margin-top: -80px;
   border: 1px solid #eee;
   border-radius: 10px 10px 0 0;
+  background: $white;
+  margin-bottom: 200px;
 
   &__controls {
     justify-content: space-between;
@@ -71,6 +74,8 @@
   }
 
   @include mq(md) {
+    margin-top: -160px;
+
     [data-title] {
       position: relative;
 

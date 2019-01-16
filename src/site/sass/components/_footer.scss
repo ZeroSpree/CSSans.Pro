@@ -1,6 +1,6 @@
 .footer {
-  background: $blue;
-  color: #fff;
+  background: $orange;
+  color: $white;
   padding: 150px 0;
   margin-top: 150px;
 
@@ -15,13 +15,13 @@
   }
 
   .button {
-    color: $blue-light;
-    border-color: $blue-light;
+    color: $white;
+    border-color: $white;
     margin: 0 0 25px;
 
     &--full {
-      background: $blue-light;
-      color: $blue;
+      background: $white;
+      color: $orange;
     }
   }
 
