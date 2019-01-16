@@ -32,3 +32,10 @@ a {
     text-align: right;
   }
 }
+
+/* Force color picker on mobile screen to stick to left side of the screen */
+@include mq(md, max) {
+  body > div:last-child {
+    left: 28px!important;
+  }
+}
