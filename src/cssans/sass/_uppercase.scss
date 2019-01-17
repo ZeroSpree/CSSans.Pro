@@ -1,0 +1,424 @@
+.cssans {
+  // Letter 'A'
+  &-A {
+    border-radius: 1em 1em 0 0;
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-accent3)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-primary)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-accent1)) 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 0, 0 1em, 0 2em;
+  }
+
+  // Letter 'B'
+  &-B {
+    width: 2.5em;
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1.5em 3em;
+
+    &::before {
+      width: 1em;
+      height: 1em;
+      background: RGB(var(--cssans-accent1));
+      border-radius: 50%;
+      top: 0;
+      left: 1em;
+      z-index: -1;
+    }
+
+    &::after {
+      width: 2em;
+      height: 2em;
+      background: RGB(var(--cssans-secondary));
+      border-radius: 50%;
+      bottom: 0;
+      left: .5em;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'C'
+  &-C {
+    width: 3em;
+    background: linear-gradient(0deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1.5em 3em;
+    border-radius: 50%;
+    margin-right: -0.33em;
+
+    &::before {
+      border: 1.5em solid transparent;
+      border-top-color: RGB(var(--cssans-secondary));
+      border-bottom-color: RGB(var(--cssans-accent1));
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'D'
+  &-D {
+    width: 3em;
+    background: linear-gradient(0deg, RGB(var(--cssans-secondary)), RGB(var(--cssans-secondary)));
+    background-repeat: no-repeat;
+    background-size: 1.5em 3em;
+
+    &::before {
+      width: 3em;
+      height: 3em;
+      background: linear-gradient(0deg, RGB(var(--cssans-primary)) 1.5em, RGB(var(--cssans-accent1)) 1.5em);
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'E'
+  &-E {
+  
+  }
+
+  // Letter 'F'
+  &-F {
+    border-radius: 1em 1em 0 0;
+    background: linear-gradient(90deg, RGB(var(--cssans-accent3)) 1em, RGB(var(--cssans-accent1)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-secondary)) 1em, transparent 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, transparent 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em, 1em 1em, 1em 1em;
+    background-position: 0 0, 0 1em, 0 2em;
+
+    &::before {
+      border: 1em solid transparent;
+      border-top-color: RGB(var(--cssans-primary));
+      border-radius: 50%;
+      top: 1em;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'G'
+  &-G {
+    width: 3em;
+    background: linear-gradient(-45deg, RGB(var(--cssans-accent1)) 1.06em, RGB(var(--cssans-primary)) 1em);
+    background-repeat: no-repeat;
+    background-size: 1.5em 3em;
+    border-radius: 50%;
+
+    &::before {
+      border: 1.5em solid transparent;
+      border-top-color: RGB(var(--cssans-secondary));
+      border-bottom-color: RGB(var(--cssans-accent3));
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    &::after {
+      width: 1.5em;
+      height: 1.5em;
+      background: RGB(var(--cssans-accent2));
+      right: 0;
+      bottom: 0;
+      z-index: -2;
+    }
+  }
+
+  // Letter 'H'
+  &-H {
+    width: 2.5em;
+    background: linear-gradient(-45deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1em 3em;
+
+    &::before {
+      width: 2em;
+      height: 1em;
+      background: RGBA(var(--cssans-accent3), .54);
+      top: 1em;
+      left: 0;
+    }
+
+    &::after {
+      width: 1em;
+      height: 3em;
+      background: RGB(var(--cssans-secondary));
+      top: 0;
+      right: 0;
+    }
+  }
+
+  // Letter 'I'
+  &-I {
+    width: 1em;
+    background: RGB(var(--cssans-primary));
+  }
+
+  // Letter 'J'
+  &-J {
+    border-radius: 0 0 1em 1em;
+    background: linear-gradient(90deg, transparent 1em, RGB(var(--cssans-primary)) 1em), 
+                linear-gradient(90deg, transparent 1em, RGB(var(--cssans-secondary)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-accent2)) 1em, RGB(var(--cssans-accent3)) 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 0, 0 1em, 0 2em;
+  }
+
+  // Letter 'K'
+  &-K {
+    width: 2.5em;
+
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1em 3em;
+    overflow: hidden;
+
+    &::before {
+      width: 3em;
+      height: 1.5em;
+      background: RGB(var(--cssans-accent1));
+      border-radius: 1.5em 1.5em 0 0;
+      bottom: 0;
+      left: -.5em;
+      z-index: -1;
+    }
+
+    &::after {
+      width: 3em;
+      height: 1.5em;
+      background: RGB(var(--cssans-secondary));
+      border-radius: 0 0 1.5em 1.5em;
+      top: 0;
+      left: -.5em;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'L'
+  &-L {
+    border-radius: 0 0 0 1em;
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, transparent 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, transparent 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-primary)) 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 0, 0 1em, 0 2em;
+
+    &::before {
+      width: 1em;
+      height: 1em;
+      background: RGB(var(--cssans-accent3));
+      border-top-right-radius: 100%;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  // Letter 'M'
+  &-M {
+    @extend .cssans-m;
+
+    height: 3em;
+
+    &::before,
+    &::after {
+      height: 3em;
+    }
+
+    &::before {
+      border-top-right-radius: 1em 1.5em;
+    }
+  }
+
+  // Letter 'N'
+  &-N {
+    width: 3em;
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, transparent 1em, transparent 2em, RGB(var(--cssans-primary)) 2em);
+    overflow: hidden;
+
+    &::before {
+      width: 1em;
+      height: 3em;
+      background: RGB(var(--cssans-secondary));
+      left: 1em;
+      border-radius: 0 1em;
+    }
+  }
+
+  // Letter 'O'
+  &-O {
+    width: 3em;
+    background: RGB(var(--cssans-primary));
+    border-radius: 50%;
+  }
+
+  &-P {
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1em 3em;
+
+    &::before {
+      width: 2em;
+      height: 2em;
+      background: linear-gradient(0deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-accent1)) 1em);
+      border-radius: 50%;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'Q'
+  &-Q {
+    @extend .cssans-O;
+
+    &::before {
+      width: 1.5em;
+      height: 1.5em;
+      background: RGB(var(--cssans-secondary));
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'R'
+  &-R {
+    width: 2.5em;
+    background: linear-gradient(0deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+
+    &::before {
+      width: 2em;
+      height: 2em;
+      top: 0;
+      right: 0;
+      background: linear-gradient(0deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-accent1)) 1em);
+      border-radius: 50%;
+      z-index: -1;
+    }
+
+    &::after {
+      width: 2em;
+      height: 1em;
+      bottom: 0;
+      right: 0;
+      background: linear-gradient(0deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-accent1)) 1em);
+      border-radius: 1em 1em 0 0;
+      z-index: -1;
+    }
+  }
+
+  // Letter 'S'
+  &-S {
+    @extend .cssans-s;
+
+    top: 0;
+  }
+
+  // Letter 'T'
+  &-T {
+    width: 3em;
+
+    &::before {
+      width: 1em;
+      height: 3em;
+      top: 0;
+      left: 1em;
+      background: RGB(var(--cssans-primary));
+    }
+
+    &::after {
+      width: 3em;
+      height: 1em;
+      top: 0;
+      left: 0;
+      background: linear-gradient(90deg, RGB(var(--cssans-accent1)) 1em, transparent 1em, transparent 2em, RGB(var(--cssans-secondary)) 2em);
+    }
+  }
+
+  // Letter 'U'
+  &-U {
+    border-radius: 0 0 1em 1em;
+    background: linear-gradient(90deg, RGB(var(--cssans-accent1)) 1em, RGB(var(--cssans-primary)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-secondary)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-accent3)) 1em, RGB(var(--cssans-primary)) 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 0, 0 1em, 0 2em;
+  }
+
+  // Letter 'V'
+  &-V {
+    &::before {
+      width: 1em;
+      height: 3em;
+      background: RGB(var(--cssans-accent2));
+      border-radius: 0 1em;
+    }
+
+    &::after {
+      width: 1em;
+      height: 3em;
+      background: RGB(var(--cssans-primary));
+      border-radius: 1em 0;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  // Letter 'W'
+  &-W {
+    width: 3em;
+  }
+
+  // Letter 'X'
+  &-X {
+    @extend .cssans-x;
+
+    width: 3em;
+    height: 3em;
+
+    &::before,
+    &::after {
+      height: 3em;
+    }
+  }
+
+  // Letter 'Y'
+  &-Y {
+    width: 3em;
+    background: linear-gradient(0deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-secondary)) 1em);
+    background-repeat: no-repeat;
+    background-size: 1em 2em;
+    background-position: 1em 1em;
+
+    &::before,
+    &::after {
+      width: 1em;
+      height: 2em;
+      background: linear-gradient(0deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-secondary)) 1em);
+      border-radius: 0 1em;
+    }
+
+    &::after {
+      right: 0;
+      border-radius: 1em 0;
+    }
+  }
+
+  // Letter 'Z'
+  &-Z {
+    @extend .cssans-z;
+
+    width: 3em;
+    height: 3em;
+
+    &::before,
+    &::after {
+      height: 1.5em;
+    }
+
+    &::after {
+      top: 1.5em;
+    }
+  }
+}
