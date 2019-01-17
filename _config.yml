@@ -2,7 +2,7 @@ title: "CSSans Pro - The flexbile CSS font"
 url: "cssans.pro"
 baseurl: ""
 is_production: true
-filesize: 9
+filesize: 20
 
 permalink: /:title/
 markdown: kramdown

@@ -21,21 +21,20 @@
 
   // Letter 'b'
   &-b {
-    margin-top: 1.1em;
-    height: 2em;
+    height: 3em;
 
     &::before {
       background: RGB(var(--cssans-primary));
       width: 2em;
       height: 2em;
-      top: 0;
+      top: 1em;
       border-radius: 50%;
     }
 
     &::after {
       width: 1em;
       height: 3em;
-      top: -1em;
+      top: 0;
       background: RGBA(var(--cssans-secondary), .54);
     }
   }
@@ -97,7 +96,6 @@
     background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, transparent 1em) no-repeat;
     background-size: 1em 1em;
     background-position: 0em 2em;
-    margin-top: 1.1em;
 
     &::before {
       top: 0;
@@ -141,24 +139,23 @@
 
   // Letter 'h'
   &-h {
-    height: 2em;
-    background: linear-gradient(90deg, RGB(var(--cssans-accent1)) 2em, transparent 2em) no-repeat;
-    background-size: 2em 1em;
-    border-radius: 1em;
-    margin-top: 1.1em;
-
     &::before {
-      background: linear-gradient(90deg, RGB(var(--cssans-accent2)) 1em, RGB(var(--cssans-primary)) 1em) no-repeat;
-      height: 1em;
+      background: linear-gradient(90deg, RGB(var(--cssans-accent1)) 1em, RGB(var(--cssans-accent1)) 1em) no-repeat,
+                  linear-gradient(90deg, RGB(var(--cssans-accent2)) 1em, RGB(var(--cssans-primary)) 1em) no-repeat;
+      background-repeat: no-repeat;
+      background-size: 2em 1em;
+      background-position: 0 0, 0 1em;
+      height: 2em;
       width: 2em;
-      top: 1em;
+      bottom: 0;
+      border-radius: 1em 1em 0 0;
     }
 
     &::after {
       background: RGBA(var(--cssans-primary), .6);
       width: 1em;
       height: 2em;
-      top: -1em;
+      top: 0;
     }
   }
 
@@ -201,7 +198,6 @@
   &-k {
     background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, transparent 1em) no-repeat;
     background-size: 1em 3em;
-    margin-top: 1.1em;
 
     &::after,
     &::before {
@@ -225,7 +221,6 @@
     width: 1em;
     background: RGB(var(--cssans-primary));
     border-bottom-left-radius: 1em;
-    margin-top: 1.1em;
   }
 
   // Letter 'm'
@@ -270,25 +265,19 @@
   &-p {
     @extend .cssans-b;
 
-    margin-top: 0;
+    height: 2em;
 
-    &::after {
+    &::before {
       top: 0;
     }
   }
 
   // Letter 'q'
   &-q {
-    @extend .cssans-d;
-
-    margin-top: 0;
+    @extend .cssans-p;
 
     &::before {
       background: RGB(var(--cssans-accent1));
-    }
-
-    &::after {
-      top: 0;
     }
   }
 
@@ -317,7 +306,7 @@
 
   // Letter 's'
   &-s {
-    top: 1em;
+    height: 2em;
 
     &::after {
       border: 1em solid transparent;
@@ -335,14 +324,12 @@
       border-bottom-color: RGB(var(--cssans-accent1));
       border-radius: 50%;
       transform: rotate(45deg);
-      bottom: 0;
+      top: 1em;
     }
   }
 
   // Letter 't'
   &-t {
-    margin-top: 1.1em;
-
     &::before {
       width: 1em;
       height: 1em;

@@ -74,7 +74,26 @@
 
   // Letter 'E'
   &-E {
-  
+    margin-top: 2em;
+    height: 1em;
+    background: RGB(var(--cssans-primary));
+    border-radius: 0 1em;
+
+    &::before {
+      height: 1em;
+      width: 2em;
+      top: -1em;
+      border-radius: 0 1em 1em 0;
+      background: RGB(var(--cssans-accent1));
+    }
+
+    &::after {
+      height: 1em;
+      width: 2em;
+      top: -2em;
+      border-radius: 1em 0;
+      background: RGB(var(--cssans-secondary));
+    }
   }
 
   // Letter 'F'
@@ -311,7 +330,7 @@
   &-S {
     @extend .cssans-s;
 
-    top: 0;
+    height: 3em;
   }
 
   // Letter 'T'
@@ -367,7 +386,29 @@
 
   // Letter 'W'
   &-W {
-    width: 3em;
+    width: 1em;
+    height: 2em;
+    margin-top: 1em;
+    margin-left: 1em;
+    margin-right: 1.1em;
+    background: RGB(var(--cssans-secondary));
+    border-radius: 1em 1em 0 0;
+
+    &::before,
+    &::after {
+      width: 1em;
+      height: 3em;
+      top: -1em;
+      left: -1em;
+      background: RGB(var(--cssans-accent2));
+      border-radius: 0 1em;
+    }
+
+    &::after {
+      left: 1em;
+      background: RGB(var(--cssans-primary));
+      border-radius: 1em 0;
+    }
   }
 
   // Letter 'X'
