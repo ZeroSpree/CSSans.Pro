@@ -39,7 +39,7 @@
   &__right {
     text-align: right;
 
-    .cssans__word:not(:first-child) {
+    .cssans__word {
       margin-left: 1em;
       margin-right: 0;
     }
