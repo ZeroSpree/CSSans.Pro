@@ -13,6 +13,53 @@
   --cssans-accent3: 255, 216, 9;    // yellow
 }
 
+.cssans {
+
+  &__word {
+    display: inline-block;
+    margin-right: 1em;
+
+    // Fix for letters that use z-index: -1 over a background color.
+    position: relative;
+    z-index: 1;
+  }
+
+  &__center {
+    text-align: center;
+
+    .cssans__word {
+      margin-left: .5em;
+      margin-right: .5em;
+    }
+  }
+
+  &__right {
+    text-align: right;
+
+    .cssans__word {
+      margin-left: 1em;
+      margin-right: 0;
+    }
+  }
+
+  &__accessible {
+    clip: rect(1px,1px,1px,1px);
+    clip-path: inset(1px);
+    border: 0;
+    padding: 0;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    position: absolute;
+    background: #000;
+    color: #fff;
+    font-size: 20px;
+  }
+}
+
 [class^="cssans-"] {
   line-height: 0;
   font-size: inherit;
@@ -29,35 +76,7 @@
     content: '';
     position: absolute;
   }
-}
 
-.cssans__word {
-  display: inline-block;
-
-  // Fix for letters that use z-index: -1 over a background color.
-  position: relative;
-  z-index: 1;
-
-  &:not(:last-child) {
-    margin-right: 1em;
-  }
-}
-
-.cssans__accessible {
-  clip: rect(1px,1px,1px,1px);
-  clip-path: inset(1px);
-  border: 0;
-  padding: 0;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  white-space: nowrap;
-  overflow: hidden;
-  display: block;
-  position: absolute;
-  background: #000;
-  color: #fff;
-  font-size: 20px;
 }
 
 @import

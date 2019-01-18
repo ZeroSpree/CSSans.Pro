@@ -77,8 +77,8 @@
   #playground {
     padding: 2em 16px;
     border-top: 0;
-    text-align: center;
     zoom: .5;
+    width: 100%;
   }
 
   @include mq(md) {
