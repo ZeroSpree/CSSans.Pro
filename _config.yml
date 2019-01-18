@@ -13,4 +13,7 @@ exclude: ["node_modules",
           "gulpfile.js",
           "package.json",
           "package-lock.json",
-          "README.md"]
+          "README.md",
+          "CNAME"]
+
+

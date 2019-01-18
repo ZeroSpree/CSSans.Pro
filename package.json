@@ -20,6 +20,7 @@
     "autoprefixer": "^9.4.3",
     "browser-sync": "^2.26.3",
     "cssnano": "^4.1.7",
+    "del": "^3.0.0",
     "gulp": "^4.0.0",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^8.0.0",

@@ -10,6 +10,7 @@ const sourcemaps   = require('gulp-sourcemaps');
 const cssnano      = require('cssnano');
 const rename       = require('gulp-rename');
 const run          = require('gulp-run');
+const del          = require('del');
 
 // BrowserSync
 const browserSyncConfig = {
@@ -35,6 +36,11 @@ function browserSyncReload(done) {
   done();
 }
 
+// Clean Assets
+function clean() {
+  return del(['_includes/assets/', 'dist', '_site', 'min']);
+}
+
 // CSS task
 function css() {
   return gulp
@@ -45,39 +51,30 @@ function css() {
     .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./dist/site/css/"))
-    .pipe(gulp.dest("./_site/dist/site/css/"))
+    .pipe(gulp.dest("./min/"))
 
      // Prod version
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest("./dist/site/css/"))
-    .pipe(gulp.dest("./_site/dist/site/css/"));
+    .pipe(gulp.dest("./_includes/assets/"));
 }
 
-// CSSans task
+// CSSans task, outputs to dist/folder
 function cssans() {
   return gulp
-     // Dev version
     .src("./src/cssans/sass/**/*.scss")
-    .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest("./dist/cssans/css/"))
-    .pipe(gulp.dest("./_site/dist/cssans/css/"))
 
      // Prod version
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest("./dist/cssans/css/"))
-    .pipe(gulp.dest("./_site/dist/cssans/css/"))
+    .pipe(gulp.dest("./dist/"))
 
      // IE version (doesn't support CSS vars)
     .pipe(rename({ suffix: ".ie" }))
     .pipe(postcss([cssvariables]))
-    .pipe(gulp.dest("./dist/cssans/css/"))
-    .pipe(gulp.dest("./_site/dist/cssans/css/"));
+    .pipe(gulp.dest("./dist/"));
 }
 
 // Jekyll task
@@ -87,7 +84,7 @@ function jekyll() {
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./src/site/sass/**/*", css);
+  gulp.watch("./src/**/*", css);
   gulp.watch("./src/cssans/sass/**/*", cssans);
   gulp.watch(
     [
@@ -98,7 +95,8 @@ function watchFiles() {
   );
 }
 
-const watch = gulp.series(css, cssans, jekyll, gulp.parallel(watchFiles, browserSync));
+const watch = gulp.series(clean, css, cssans, jekyll, gulp.parallel(watchFiles, browserSync));
 
+exports.clean = clean;
 exports.default = watch;
 
