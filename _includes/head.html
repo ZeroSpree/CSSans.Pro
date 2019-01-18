@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0">
 
     {%- if site.is_production -%}
-        <style>{% include assets/css/main.min.css %}</style>
+        <style>{% include assets/main.min.css %}</style>
     {%- else -%}
         <link type="text/css" rel="stylesheet" href="{{ "min/main.css" | relative_url }}" />
     {%- endif -%}
