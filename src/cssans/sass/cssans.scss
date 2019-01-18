@@ -17,11 +17,14 @@
 
   &__word {
     display: inline-block;
-    margin-right: 1em;
 
     // Fix for letters that use z-index: -1 over a background color.
     position: relative;
     z-index: 1;
+
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
   }
 
   &__center {
@@ -36,7 +39,7 @@
   &__right {
     text-align: right;
 
-    .cssans__word {
+    .cssans__word:not(:first-child) {
       margin-left: 1em;
       margin-right: 0;
     }
