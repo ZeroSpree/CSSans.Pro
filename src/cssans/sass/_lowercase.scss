@@ -279,6 +279,10 @@
     &::before {
       background: RGB(var(--cssans-accent1));
     }
+
+    &::after {
+      right: 0;
+    }
   }
 
   // Letter 'r'
