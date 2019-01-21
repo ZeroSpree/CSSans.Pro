@@ -5,7 +5,7 @@ title: "CSSans Pro"
 subtitle: "The Colourful, Sassy, CSS Font"
 documentation: "https://github.com/ZeroSpree/CSSans.Pro"
 download: "https://cssans.pro/dist/cssans.min.css"
-filesize: "16.9kb"
+filesize: "20kb"
 
 permalink: /:title/
 markdown: kramdown
