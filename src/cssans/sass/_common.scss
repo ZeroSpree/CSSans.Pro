@@ -59,6 +59,10 @@
     }
   }
 
+  &__italic .cssans__word {
+    transform: skew(-15deg);
+  }
+
   &__accessible {
     clip: rect(1px,1px,1px,1px);
     clip-path: inset(1px);
