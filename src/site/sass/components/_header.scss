@@ -10,15 +10,6 @@
     z-index: 1;
   }
 
-  .heading {
-    width: 100%;
-    margin-bottom: 50px;
-
-    em {
-      color: $blue-secondary;
-    }
-  }
-
   .button {
     color: $blue-secondary;
     border-color: $blue-secondary;
@@ -31,10 +22,6 @@
 
   @include mq(md) {
     padding-bottom: 160px;
-
-    .heading {
-      margin-bottom: 75px;
-    }
 
     .button {
       display: inline-block;
