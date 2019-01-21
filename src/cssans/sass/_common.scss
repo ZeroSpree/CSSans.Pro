@@ -4,6 +4,10 @@
   --cssans-accent1: 43, 208, 247;   // light blue
   --cssans-accent2: 255, 92, 92;    // orange
   --cssans-accent3: 255, 216, 9;    // yellow
+
+  --cssans-letter-spacing: .1em;
+  --cssans-word-spacing: 1em;
+  --cssans-line-height: 1.1em;
 }
 
 [class^="cssans-"] {
@@ -14,8 +18,8 @@
   position: relative;
   width: 2em;
   height: 3em;
-  margin-right: .1em;
-  margin-bottom: 1.1em;
+  margin-right: var(--cssans-letter-spacing);
+  margin-bottom: var(--cssans-line-height);
 
   &::after,
   &::before {
@@ -33,7 +37,7 @@
     z-index: 1;
 
     &:not(:last-child) {
-      margin-right: 1em;
+      margin-right: var(--cssans-word-spacing);
     }
   }
 
@@ -41,8 +45,8 @@
     text-align: center;
 
     .cssans__word {
-      margin-left: .5em;
-      margin-right: .5em;
+      margin-left: calc( var(--cssans-word-spacing) / 2);
+      margin-right: calc( var(--cssans-word-spacing) / 2);
     }
   }
 
@@ -50,7 +54,7 @@
     text-align: right;
 
     .cssans__word {
-      margin-left: 1em;
+      margin-left: var(--cssans-word-spacing);
       margin-right: 0;
     }
   }

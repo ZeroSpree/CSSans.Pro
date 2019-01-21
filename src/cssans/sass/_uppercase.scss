@@ -40,12 +40,7 @@
 
   // Letter 'C'
   &-C {
-    width: 3em;
-    background: linear-gradient(0deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
-    background-repeat: no-repeat;
-    background-size: 1.5em 3em;
-    border-radius: 50%;
-    margin-right: -0.33em;
+    width: 2.56em;
 
     &::before {
       border: 1.5em solid transparent;
@@ -53,6 +48,15 @@
       border-bottom-color: RGB(var(--cssans-accent1));
       border-radius: 50%;
       z-index: -1;
+    }
+
+    &::after {
+      width: 3em;
+      height: 3em;
+      background: linear-gradient(0deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+      background-repeat: no-repeat;
+      background-size: 1.5em 3em;
+      border-radius: 50%;
     }
   }
 
@@ -396,7 +400,7 @@
     height: 2em;
     margin-top: 1em;
     margin-left: 1em;
-    margin-right: 1.1em;
+    margin-right: calc(1em + var(--cssans-letter-spacing));
     background: RGB(var(--cssans-secondary));
     border-radius: 1em 1em 0 0;
 
