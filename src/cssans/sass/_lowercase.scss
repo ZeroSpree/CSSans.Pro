@@ -1,19 +1,22 @@
 .cssans {
   // Letter 'a'
   &-a {
-    height: 2em;
-
     &::before {
-      border: 1em solid RGB(var(--cssans-secondary));
-      border-left-color: RGB(var(--cssans-accent1));
+      width: 2em;
+      height: 2em;
+      background: linear-gradient(90deg, RGB(var(--cssans-accent1)), RGB(var(--cssans-accent1))),
+                  linear-gradient(90deg, RGB(var(--cssans-secondary)), RGB(var(--cssans-secondary)));
+      background-repeat: no-repeat;
+      background-size: 1em 1em, 2em 2em;
+      background-position: 0 0, 0 0;
       border-radius: 50%;
-      transform: rotate(45deg);
+      bottom: 0;
     }
 
     &::after {
       width: 1em;
       height: 2em;
-      top: 0;
+      bottom: 0;
       left: 1em;
       background: RGBA(var(--cssans-primary), .6);
     }
@@ -21,8 +24,6 @@
 
   // Letter 'b'
   &-b {
-    height: 3em;
-
     &::before {
       background: RGB(var(--cssans-primary));
       width: 2em;
@@ -73,44 +74,40 @@
 
   // Letter 'e'
   &-e {
-    height: 2em;
-
     &::before {
-      border: 1em solid RGB(var(--cssans-primary));
-      border-top-color: RGB(var(--cssans-secondary));
-      border-right-color: transparent;
+      height: 2em;
+      width: 2em;
+      background: linear-gradient(0deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
+                  linear-gradient(90deg, RGB(var(--cssans-secondary)), RGB(var(--cssans-secondary)));
+      background-repeat: no-repeat;
+      background-size: 1em 2em, 1em 1em;
+      background-position: 0 0, 1em 0;
       border-radius: 50%;
-      transform: rotate(45deg);
       z-index: 1;
+      bottom: 0;
     }
 
     &::after {
       border: 1em solid transparent;
       border-bottom-color: RGB(var(--cssans-accent1));
       border-radius: 50%;
+      bottom: 0;
     }
   }
 
   // Letter 'f'
   &-f {
-    background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, transparent 1em) no-repeat;
-    background-size: 1em 1em;
-    background-position: 0em 2em;
-
-    &::before {
-      top: 0;
-      border: 1em solid transparent;
-      border-top-color: RGB(var(--cssans-primary));
-      border-radius: 50%;
-      transform: rotate(45deg);
-    }
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1em 1em, 1em 1em;
+    background-position: 0 2em, 1em 0;
+    border-top-right-radius: 1em;
 
     &::after {
-      top: 0;
       width: 1em;
       height: 3em;
-      border-top-left-radius: 1em;
-      border-bottom-right-radius: 1em;
+      border-radius: 1em 0;
       background: linear-gradient(0deg, RGBA(var(--cssans-secondary), .54) 1em, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-secondary)) 2em, RGB(var(--cssans-accent3)) 2em);
     }
   }
@@ -162,35 +159,27 @@
   // Letter 'i'
   &-i {
     width: 1em;
-    height: 2em;
 
     &::before {
       background: RGB(var(--cssans-primary));
       width: 1em;
       height: 2em;
+      bottom: 0;
     }
   }
 
   // Letter 'j'
   &-j {
-    height: 2em;
-
     &::before {
-      background: linear-gradient(0deg, RGB(var(--cssans-accent2)) 1em, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-secondary)) 2em, RGB(var(--cssans-primary)) 2em);
-      width: 1em;
+      background: linear-gradient(0deg, RGB(var(--cssans-accent2)) 1em, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-secondary)) 2em, RGB(var(--cssans-primary)) 2em),
+                  linear-gradient(0deg, RGB(var(--cssans-accent1)), RGB(var(--cssans-accent1)));
+      background-repeat: no-repeat;
+      background-size: 1em 3em, 1em 1em;
+      background-position: 1em 0, 0 2em;
+      width: 2em;
       height: 3em;
-      border-bottom-right-radius: 1em;
-      right: 0;
+      border-radius: 0 0 1em 1em;
       bottom: -1em;
-    }
-
-    &::after {
-      border: 1em solid transparent;
-      border-bottom-color: RGB(var(--cssans-accent1));
-      border-radius: 50%;
-      bottom: -1em;
-      z-index: 1;
-      transform: rotate(45deg);
     }
   }
 
@@ -310,25 +299,24 @@
 
   // Letter 's'
   &-s {
-    height: 2em;
-
-    &::after {
-      border: 1em solid transparent;
-      border-top-color: RGB(var(--cssans-accent1));
-      border-left-color: RGB(var(--cssans-primary));
-      border-bottom-color: RGB(var(--cssans-accent2));
-      border-radius: 50%;
-      transform: rotate(45deg);
+    &::before {
+      width: 2em;
+      height: 3em;
+      background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-accent1)) 1em),
+                  linear-gradient(90deg, RGB(var(--cssans-accent1)) 1em, RGB(var(--cssans-secondary)) 1em);
+      background-repeat: no-repeat;
+      background-size: 2em 1em;
+      background-position: 0 0, 0 2em;
+      border-radius: 1em;
+      top: 1em;
     }
 
-    &::before {
-      border: 1em solid transparent;
-      border-top-color: RGB(var(--cssans-accent3));
-      border-right-color: RGB(var(--cssans-secondary));
-      border-bottom-color: RGB(var(--cssans-accent1));
-      border-radius: 50%;
-      transform: rotate(45deg);
-      top: 1em;
+    &::after {
+      width: 2em;
+      height: 1em;
+      background: linear-gradient(90deg, RGB(var(--cssans-accent2)) 1em, RGB(var(--cssans-accent3)) 1em);
+      top: 2em;
+      border-radius: 0 1em;
     }
   }
 

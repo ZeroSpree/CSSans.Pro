@@ -6,8 +6,25 @@
   --cssans-accent3: 255, 216, 9;    // yellow
 }
 
-.cssans {
+[class^="cssans-"] {
+  line-height: 0;
+  font-size: inherit;
+  text-align: left;
+  display: inline-block;
+  position: relative;
+  width: 2em;
+  height: 3em;
+  margin-right: .1em;
+  margin-bottom: 1.1em;
 
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+  }
+}
+
+.cssans {
   &__word {
     display: inline-block;
 
@@ -54,23 +71,4 @@
     color: #fff;
     font-size: 20px;
   }
-}
-
-[class^="cssans-"] {
-  line-height: 0;
-  font-size: inherit;
-  text-align: left;
-  display: inline-block;
-  position: relative;
-  width: 2em;
-  height: 3em;
-  margin-right: .1em;
-  margin-bottom: 1.1em;
-
-  &::after,
-  &::before {
-    content: '';
-    position: absolute;
-  }
-
 }

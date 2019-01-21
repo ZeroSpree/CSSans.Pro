@@ -330,7 +330,13 @@
   &-S {
     @extend .cssans-s;
 
-    height: 3em;
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      top: 1em;
+    }
   }
 
   // Letter 'T'
