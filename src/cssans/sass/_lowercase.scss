@@ -341,12 +341,11 @@
 
   // Letter 'u'
   &-u {
-    height: 2em;
-
     &::before {
       width: 2em;
       height: 1em;
       background: linear-gradient(90deg, RGB(var(--cssans-accent3)), RGB(var(--cssans-accent3)) 1em, RGB(var(--cssans-primary)) 1em);
+      top: 1em;
     }
 
     &::after {
@@ -354,17 +353,19 @@
       height: 1em;
       background: RGB(var(--cssans-accent1));
       border-radius: 0 0 1em 1em;
-      top: 1em;
+      top: 2em;
     }
   }
 
   // Letter 'v'
   &-v {
-    height: 2em;
-
-    &::before {
+    &::before, &::after {
       width: 1em;
       height: 2em;
+      top: 1em;
+    }
+
+    &::before {
       border-radius: 0 1em;
       background: RGB(var(--cssans-accent2));
       left: 0;
@@ -381,6 +382,8 @@
 
   // Letter 'w'
   &-w {
+    height: 2em;
+
     width: 1em;
     margin-left: 1em;
     margin-right: 1.1em;
@@ -393,27 +396,30 @@
 
     &::before {
       left: -1em;
+      top: 0;
     }
 
     &::after {
       right: -1em;
+      top: 0;
     }
   }
 
   // Letter 'x'
   &-x {
-    height: 2em;
-
-    &::before {
+    &::before,
+    &::after {
       width: 50%;
       height: 2em;
+      top: 1em;
+    }
+
+    &::before {
       background: linear-gradient(0deg, RGB(var(--cssans-primary)) 50%, RGB(var(--cssans-secondary)) 50%);
       border-radius: 0 3em 3em 0;
     }
 
     &::after {
-      width: 50%;
-      height: 2em;
       background: linear-gradient(0deg, RGB(var(--cssans-secondary)) 50%, RGB(var(--cssans-primary)) 50%);
       border-radius: 3em 0 0 3em;
       right: 0;
@@ -447,21 +453,22 @@
 
   // Letter 'z'
   &-z {
-    height: 2em;
-
+    &::after,
     &::before {
       width: 100%;
       height: 1em;
+    }
+
+    &::before {
       background: linear-gradient(90deg, RGB(var(--cssans-accent3)) 50%, RGB(var(--cssans-accent1)) 50%);
       border-bottom-right-radius: 3em;
+      top: 1em;
     }
 
     &::after {
-      width: 100%;
-      height: 1em;
       background: linear-gradient(90deg, RGB(var(--cssans-primary)) 50%, RGB(var(--cssans-secondary)) 50%);
       border-top-left-radius: 3em;
-      top: 1em;
+      top: 2em;
     }
   }
 }

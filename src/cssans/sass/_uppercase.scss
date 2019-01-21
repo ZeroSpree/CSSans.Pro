@@ -422,11 +422,11 @@
     @extend .cssans-x;
 
     width: 3em;
-    height: 3em;
 
     &::before,
     &::after {
       height: 3em;
+      top: 0;
     }
   }
 
@@ -459,13 +459,14 @@
     width: 3em;
     height: 3em;
 
-    &::before,
-    &::after {
+    &::before {
+      top: 0;
       height: 1.5em;
     }
 
     &::after {
       top: 1.5em;
+      height: 1.5em;
     }
   }
 }
