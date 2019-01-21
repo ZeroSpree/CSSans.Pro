@@ -5,84 +5,8 @@
  * Licensed under MIT (https://github.com/ZeroSpree/CSSans.Pro/blob/master/LICENSE)
  */
 
-:root {
-  --cssans-primary: 31, 51, 104;    // blue
-  --cssans-secondary: 237, 21, 118; // pink
-  --cssans-accent1: 43, 208, 247;   // light blue
-  --cssans-accent2: 255, 92, 92;    // orange
-  --cssans-accent3: 255, 216, 9;    // yellow
-}
-
-.cssans {
-
-  &__word {
-    display: inline-block;
-
-    // Fix for letters that use z-index: -1 over a background color.
-    position: relative;
-    z-index: 1;
-
-    &:not(:last-child) {
-      margin-right: 1em;
-    }
-  }
-
-  &__center {
-    text-align: center;
-
-    .cssans__word {
-      margin-left: .5em;
-      margin-right: .5em;
-    }
-  }
-
-  &__right {
-    text-align: right;
-
-    .cssans__word {
-      margin-left: 1em;
-      margin-right: 0;
-    }
-  }
-
-  &__accessible {
-    clip: rect(1px,1px,1px,1px);
-    clip-path: inset(1px);
-    border: 0;
-    padding: 0;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    white-space: nowrap;
-    overflow: hidden;
-    display: block;
-    position: absolute;
-    background: #000;
-    color: #fff;
-    font-size: 20px;
-  }
-}
-
-[class^="cssans-"] {
-  line-height: 0;
-  font-size: inherit;
-  text-align: left;
-  display: inline-block;
-  position: relative;
-  width: 2em;
-  height: 3em;
-  margin-right: .1em;
-  margin-bottom: 1.1em;
-
-  &::after,
-  &::before {
-    content: '';
-    position: absolute;
-  }
-
-}
-
 @import
+  "common",
   "lowercase",
   "uppercase",
   "numbers"

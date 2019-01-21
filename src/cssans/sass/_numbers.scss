@@ -1,0 +1,170 @@
+.cssans {
+  // Number '1'
+  &-1 {
+    background: linear-gradient(90deg, transparent .7em, RGB(var(--cssans-primary)) .7em) no-repeat;
+    width: 1.7em;
+
+    &::before {
+      border: 1em solid transparent;
+      border-bottom-color: RGB(var(--cssans-primary));
+      border-radius: 50%;
+      top: -1em;
+      left: -.3em;
+    }
+  }
+
+  // Number '2'
+  &-2 {
+    background-image: linear-gradient(90deg, RGB(var(--cssans-accent1)) 1em, RGB(var(--cssans-primary)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-accent1)) 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 0, 0 2em;
+    border-radius: 1em 1em 0 0;
+
+    &::before {
+      width: 2em;
+      height: 1em;
+      background: linear-gradient(90deg, RGB(var(--cssans-accent3)) 1em, RGB(var(--cssans-accent2)) 1em);
+      top: 1em;
+      border-radius: 1em 0;
+    }
+  }
+
+  // Number '3'
+  &-3 {
+    &::before {
+      width: 2em;
+      height: 2em;
+      background: linear-gradient(90deg, RGB(var(--cssans-secondary)), RGB(var(--cssans-secondary))), 
+                linear-gradient(90deg, RGB(var(--cssans-accent1)), RGB(var(--cssans-accent1)));
+      background-repeat: no-repeat;
+      background-size: 2em 1em, 1em 1em;
+      background-position: 0 0, 1em 1em;
+      border-radius: 50%;
+    }
+
+    &::after {
+      width: 2em;
+      height: 2em;
+      top: 1em;
+      background: linear-gradient(90deg, RGB(var(--cssans-accent1)), RGB(var(--cssans-accent1))), 
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+      background-repeat: no-repeat;
+      background-size: 1em 1em, 2em 1em;
+      background-position: 1em 0, 0 1em;
+      border-radius: 50%;
+    }
+  }
+
+  // Number '4'
+  &-4 {
+    &::before {
+      width: 1em;
+      height: 2em;
+      border-radius: 0 1em;
+      background: linear-gradient(0, RGB(var(--cssans-accent1)) 1em, RGB(var(--cssans-secondary)) 1em);
+    }
+
+    &::after {
+      width: 1em;
+      height: 3em;
+      background: RGB(var(--cssans-primary));
+      border-top-left-radius: 1em;
+      right: 0;
+    }
+  }
+
+  // Number '5'
+  &-5 {
+    @extend .cssans-2;
+
+    background-image: linear-gradient(90deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-accent1)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-accent1)) 1em, RGB(var(--cssans-primary)) 1em);
+    border-radius: 0 0 1em 1em;
+
+    &::before {
+      border-radius: 0 1em;
+    }
+  }
+
+  // Number '6'
+  &-6 {
+    background: linear-gradient(90deg, RGB(var(--cssans-secondary)), RGB(var(--cssans-secondary)));
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 0;
+    border-radius: 1em;
+
+    &::before {
+      width: 2em;
+      height: 2em;
+      bottom: 0;
+      background: RGB(var(--cssans-primary));
+      border-radius: 50%;
+    }
+
+    &::after {
+      width: 1em;
+      height: 1em;
+      background: RGBA(var(--cssans-accent1), .6);
+      top: 1em;
+    }
+  }
+
+  // Number '7'
+  &-7 {
+    background: linear-gradient(90deg, RGB(var(--cssans-accent1)) 1em, RGB(var(--cssans-primary)) 1em), 
+                linear-gradient(90deg, transparent 1em, RGB(var(--cssans-secondary)) 1em),
+                linear-gradient(90deg, transparent 1em, RGB(var(--cssans-primary)) 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 0, 0 1em, 0 2em;
+    border-top-left-radius: 1em;
+  }
+
+  // Number '8'
+  &-8 {
+    &::before,
+    &::after {
+      width: 2em;
+      height: 2em;
+      background: RGB(var(--cssans-primary));
+      border-radius: 50%;
+    }
+
+    &::after {
+      bottom: 0;
+    }
+  }
+
+  // Number '9'
+  &-9 {
+    &::before {
+      width: 2em;
+      height: 2em;
+      background: RGB(var(--cssans-primary));
+      border-radius: 1em 1em 0 1em;
+    }
+
+    &::after {
+      width: 2em;
+      height: 1em;
+      background: RGB(var(--cssans-secondary));
+      border-radius: 0 0 1em 1em;
+      bottom: 0;
+    }
+  }
+
+  // Number '0'
+  &-0 {
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-accent3)) 1em), 
+                linear-gradient(90deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-primary)) 1em),
+                linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-accent1)) 1em);
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 0, 0 1em, 0 2em;
+    border-radius: 1em;
+  }
+
+}
