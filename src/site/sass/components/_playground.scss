@@ -5,6 +5,28 @@
   border-radius: 10px 10px 0 0;
   background: $white;
   margin-bottom: 136px;
+  position: relative;
+
+  &__notice {
+    position: absolute;
+    top: -32px;
+    left: -10px;
+    color: $white;
+    font-size: 16px;
+
+    &::before {
+      content: '';
+      width: 100px;
+      height: 75px;
+      border: 1px dashed transparent;
+      border-left-color: $white;
+      border-bottom-color: $white;
+      border-radius: 50%;
+      position: absolute;
+      left: -11px;
+      top: 0;
+    }
+  }
 
   &__controls {
     justify-content: space-between;
@@ -13,6 +35,8 @@
     border-bottom: 1px solid #eee;
     padding: 0 8px;
     border-radius: 10px 10px 0 0;
+    position: relative;
+    z-index: 1;
 
     .row {
       align-items: center;
@@ -83,6 +107,10 @@
 
   @include mq(md) {
     margin-top: -160px;
+
+    &__notice {
+      font-size: 18px;
+    }
 
     [data-title] {
       position: relative;

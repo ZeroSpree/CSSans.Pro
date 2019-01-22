@@ -18,6 +18,10 @@ header {
   text-align: right;
 }
 
+.cursive {
+  font-family: 'Shadows Into Light', cursive;
+}
+
 @include mq(md) {
   .align-md-right {
     text-align: right;

@@ -1,6 +1,8 @@
 {%- assign fieldProps = 'autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"' -%}
 
 <div class="playground">
+    <span class="playground__notice cursive">Try changing the text, colors and font-size.</span>
+
     <div class="playground__controls">
         <div class="row">
             <div class="col-12 col-md-4 playground__controls-text">
@@ -29,7 +31,7 @@
 
             <div class="col-4 playground__controls-size">
                 <label data-title="Font size">
-                    <input id="ctrl-fontsize" type="range" min="10" max="72" value="44" />
+                    <input id="ctrl-fontsize" type="range" min="10" max="72" value="44" step="2" />
                 </label>
             </div>
         </div>
