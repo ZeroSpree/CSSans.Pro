@@ -1,6 +1,6 @@
-.cssans {
+.cssans\: {
   // Letter 'a'
-  &-a {
+  &a {
     &::before {
       width: 2em;
       height: 2em;
@@ -23,7 +23,7 @@
   }
 
   // Letter 'b'
-  &-b {
+  &b {
     &::before {
       background: RGB(var(--cssans-primary));
       width: 2em;
@@ -41,7 +41,7 @@
   }
 
   // Letter 'c'
-  &-c {
+  &c {
     width: 1.7em;
     height: 2em;
 
@@ -63,8 +63,8 @@
   }
 
   // Letter 'd'
-  &-d {
-    @extend .cssans-b;
+  &d {
+    @extend .cssans\:b;
 
     &::after {
       left: auto;
@@ -73,7 +73,7 @@
   }
 
   // Letter 'e'
-  &-e {
+  &e {
     &::before {
       height: 2em;
       width: 2em;
@@ -96,7 +96,7 @@
   }
 
   // Letter 'f'
-  &-f {
+  &f {
     background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
                 linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
     background-repeat: no-repeat;
@@ -113,7 +113,7 @@
   }
 
   // Letter 'g'
-  &-g {
+  &g {
     background: linear-gradient(90deg, transparent 1em, RGB(var(--cssans-primary)) 1em) no-repeat;
     background-size: 2em 3em;
     top: 1em;
@@ -135,7 +135,7 @@
   }
 
   // Letter 'h'
-  &-h {
+  &h {
     &::before {
       background: linear-gradient(90deg, RGB(var(--cssans-accent1)) 1em, RGB(var(--cssans-accent1)) 1em) no-repeat,
                   linear-gradient(90deg, RGB(var(--cssans-accent2)) 1em, RGB(var(--cssans-primary)) 1em) no-repeat;
@@ -157,7 +157,7 @@
   }
 
   // Letter 'i'
-  &-i {
+  &i {
     width: 1em;
 
     &::before {
@@ -169,7 +169,7 @@
   }
 
   // Letter 'j'
-  &-j {
+  &j {
     &::before {
       background: linear-gradient(0deg, RGB(var(--cssans-accent2)) 1em, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-secondary)) 2em, RGB(var(--cssans-primary)) 2em),
                   linear-gradient(0deg, RGB(var(--cssans-accent1)), RGB(var(--cssans-accent1)));
@@ -184,7 +184,7 @@
   }
 
   // Letter 'k'
-  &-k {
+  &k {
     background: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, transparent 1em) no-repeat;
     background-size: 1em 3em;
 
@@ -206,14 +206,14 @@
   }
 
   // Letter 'l'
-  &-l {
+  &l {
     width: 1em;
     background: RGB(var(--cssans-primary));
     border-bottom-left-radius: 1em;
   }
 
   // Letter 'm'
-  &-m {
+  &m {
     width: 3em;
     height: 2em;
 
@@ -232,7 +232,7 @@
   }
 
   // Letter 'n'
-  &-n {
+  &n {
     height: 2em;
 
     &::before {
@@ -244,15 +244,15 @@
   }
 
   // Letter 'o'
-  &-o {
+  &o {
     height: 2em;
     background: RGB(var(--cssans-primary));
     border-radius: 50%;
   }
 
   // Letter 'p'
-  &-p {
-    @extend .cssans-b;
+  &p {
+    @extend .cssans\:b;
 
     height: 2em;
 
@@ -262,8 +262,8 @@
   }
 
   // Letter 'q'
-  &-q {
-    @extend .cssans-p;
+  &q {
+    @extend .cssans\:p;
 
     &::before {
       background: RGB(var(--cssans-accent1));
@@ -275,7 +275,7 @@
   }
 
   // Letter 'r'
-  &-r {
+  &r {
     height: 2em;
     width: 1.7em;
     background: linear-gradient(90deg, RGBA(var(--cssans-secondary), .4) 1em, transparent) no-repeat;
@@ -298,7 +298,7 @@
   }
 
   // Letter 's'
-  &-s {
+  &s {
     &::before {
       width: 2em;
       height: 3em;
@@ -321,7 +321,7 @@
   }
 
   // Letter 't'
-  &-t {
+  &t {
     &::before {
       width: 1em;
       height: 1em;
@@ -340,7 +340,7 @@
   }
 
   // Letter 'u'
-  &-u {
+  &u {
     &::before {
       width: 2em;
       height: 1em;
@@ -358,7 +358,7 @@
   }
 
   // Letter 'v'
-  &-v {
+  &v {
     &::before, &::after {
       width: 1em;
       height: 2em;
@@ -381,7 +381,7 @@
   }
 
   // Letter 'w'
-  &-w {
+  &w {
     height: 2em;
 
     width: 1em;
@@ -392,7 +392,7 @@
     background-size: 1em 2em;
     border-radius: 1em 1em 0 0;
 
-    @extend .cssans-v;
+    @extend .cssans\:v;
 
     &::before {
       left: -1em;
@@ -406,7 +406,7 @@
   }
 
   // Letter 'x'
-  &-x {
+  &x {
     &::before,
     &::after {
       width: 50%;
@@ -427,7 +427,7 @@
   }
 
   // Letter 'y'
-  &-y {
+  &y {
     background: linear-gradient(90deg, RGB(var(--cssans-accent1)), RGB(var(--cssans-accent1)) 1em);
     background-repeat: no-repeat;
     background-size: 2em 1em;
@@ -452,7 +452,7 @@
   }
 
   // Letter 'z'
-  &-z {
+  &z {
     &::after,
     &::before {
       width: 100%;

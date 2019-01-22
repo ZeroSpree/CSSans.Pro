@@ -10,7 +10,7 @@ function CSSans(el, text) {
     var sansified = '<div class="cssans__accessible">' + text + '</div>' + wordBlock;
 
     for (var i in text) {
-        sansified += (text[i] == ' ') ? '</div>' + wordBlock : '<b class="cssans-' + text[i] + '"></b>';
+        sansified += (text[i] == ' ') ? '</div>' + wordBlock : '<b class="cssans:' + text[i] + '"></b>';
     }
 
     // Close the last wordBlock

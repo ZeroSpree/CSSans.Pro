@@ -10,7 +10,8 @@
   --cssans-line-height: 1.1em;
 }
 
-[class^="cssans-"] {
+/* Common character styles */
+[class^="cssans:"] {
   line-height: 0;
   font-size: inherit;
   text-align: left;
@@ -41,7 +42,7 @@
     }
   }
 
-  &__center {
+  &--center {
     text-align: center;
 
     .cssans__word {
@@ -50,7 +51,7 @@
     }
   }
 
-  &__right {
+  &--right {
     text-align: right;
 
     .cssans__word {
@@ -59,7 +60,7 @@
     }
   }
 
-  &__slanted .cssans__word {
+  &--slanted .cssans__word {
     transform: skew(-15deg);
   }
 
