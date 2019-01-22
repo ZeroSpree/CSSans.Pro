@@ -1,3 +1,14 @@
+function getParam(parameterName) {
+    var result = null,
+        tmp = [];
+    var items = location.search.substr(1).split("&");
+    for (var index = 0; index < items.length; index++) {
+        tmp = items[index].split("=");
+        if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
+    }
+    return result;
+}
+
 var cssans = {
     playground : document.getElementById('playground'),
     code : document.getElementById('code'),
@@ -27,6 +38,21 @@ var cssans = {
         var text = cssans.controls.text.value;
 
         CSSans(cssans.playground, text);
+
+        if( text == 'CSSans Pro' ) {
+            window.history.pushState('Initial', '', '/');
+        } else {
+            window.history.pushState('Text Change', text, '/?t='+text);
+        }
+    },
+
+    setTextFromParam : function () {
+        var paramText = getParam('t');
+
+        if (paramText) {
+            cssans.controls.text.value = paramText;
+            cssans.setText();
+        }
     },
 
     setFontSize : function() {
@@ -67,6 +93,7 @@ var cssans = {
     },
 
     init : function() {
+
         cssans.controls.text.addEventListener('input', cssans.setText);
         cssans.controls.fontsize.addEventListener('input', cssans.setFontSize);
         cssans.controls.fontsize.addEventListener('change', cssans.setFontSize);
@@ -76,6 +103,7 @@ var cssans = {
         }
 
         cssans.setCode();
+        cssans.setTextFromParam();
         cssans.setText();
         cssans.setFontSize();
 
