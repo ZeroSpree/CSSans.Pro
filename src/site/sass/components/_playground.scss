@@ -26,6 +26,16 @@
       left: -11px;
       top: 0;
     }
+
+    &::after {
+      content: '';
+      border: 4px solid transparent;
+      border-top-color: $white;
+      position: absolute;
+      top: 60px;
+      left: 5px;
+      transform: rotate(-90deg);
+    }
   }
 
   &__controls {

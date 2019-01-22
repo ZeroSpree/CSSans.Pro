@@ -5,13 +5,23 @@
 
   .cssans {
     &--small {
-      font-size: 10px;
+      font-size: 14px;
     }
+
     &--medium {
       font-size: 22px;
     }
+
     &--large {
       font-size: 72px;
+    }
+
+    &--custom-colors {
+      --cssans-primary: 69, 69, 69;
+      --cssans-secondary: 78, 77, 79;
+      --cssans-accent1: 88, 88, 90;
+      --cssans-accent2: 109, 110, 112;
+      --cssans-accent3: 149, 149, 149;
     }
   }
 }
