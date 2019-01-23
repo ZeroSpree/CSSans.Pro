@@ -1,4 +1,9 @@
 <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@1"></script>
-<script src="{{ "src/cssans/js/cssans.js" | relative_url }}"></script>
-<script src="{{ "src/site/js/lib/jscolor.js" | relative_url }}"></script>
-<script src="{{ "src/site/js/presentation.js" | relative_url }}"></script>
+
+{%- if site.is_production -%}
+    <script>{% include assets/main.min.js %}</script>
+{%- else -%}
+    <script src="{{ "_src/cssans/js/cssans.js" | relative_url }}"></script>
+    <script src="{{ "_src/site/js/lib/jscolor.js" | relative_url }}"></script>
+    <script src="{{ "_src/site/js/presentation.js" | relative_url }}"></script>
+{%- endif -%}

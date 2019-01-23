@@ -1,3 +1,4 @@
 is_production: false
 baseurl: ""
 url: "http://localhost:3000/"
+include: [_src, _min]

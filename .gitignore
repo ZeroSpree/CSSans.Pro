@@ -1,7 +1,7 @@
 _site
+_min
 .sass-cache
 .jekyll-metadata
 .DS_Store
 Gemfile.lock
 node_modules
-min
