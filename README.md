@@ -14,15 +14,15 @@
 ## Quick Start
 
 First, grab these 2 files from the repo:
-* /dist/cssans.min.css
-* /dist/cssans.min.js
+* `/dist/cssans.min.css`
+* `/dist/cssans.min.js`
 
-Then setup some test code:
+Then, setup some test code:
 ```html
 <div id="foo">Lorem ipsum dolor sit amet.</div>
 ```
 
-Last, call the CSSans() function provided in cssans.min.js
+Lastly, call the `CSSans()` function provided in `/dist/cssans.min.js`
 ```javascript
 var el = document.getElementById('foo');
 CSSans(el, el.innerText);
@@ -60,7 +60,7 @@ The `HTML` notation looks like this:
 ```
 
 Here's a quick breakdown:
-* Each character is a single element with a class of `cssans:{character}`
+* Each character is **a single element** with a class of `cssans:{character}`
 * Each word has it's own `.cssans__word` container. This will make sure your text is aligned and spaced properly.
 * For improved accessibility, you should keep the original text in a `.cssans__accessible` container
 * There are a few built-in helper classes such as `.cssans--center`, you can read about them [below](#customization)
