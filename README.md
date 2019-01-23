@@ -1,6 +1,6 @@
 # CSSans Pro: The Colourful, Sassy, CSS Font
 
-> CSSans Pro is a made-for-fun CSS font. Use at your own risk.
+> CSSans Pro is a made-for-fun CSS font. It's developed using SCSS and makes use of CSS Custom Properties (a.k.a. CS variables). Use at your own risk.
 
 ## Table of Contents
 
@@ -8,7 +8,7 @@
 * [CSS only setup](#css-only-setup) - Write your own CSSans Markup, no JS involved
 * [Customization](#customization) - See available options and learn how to make CSSans Pro your own
 * [IE support](#ie-support) - CSSans Pro can work without CSS variables
-* [Accessibility](#accessibility) - Making sure everyone ca read the text
+* [Accessibility](#accessibility) - Super, super, super important
 
 
 ## Quick Start
