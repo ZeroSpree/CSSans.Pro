@@ -6,15 +6,15 @@
 
 * [Getting Started](#getting-started) - **Quick setup without headaches**
 * [Getting Started without JS](#getting-started-without-js) - Write your own CSSans Markup
-* [Customize to your needs](#customize-to-your-needs) - Learn how to customize CSSans Pro
+* [Customization](#customization) - See available options and learn how to make CSSans Pro your own
 * [IE support](#ie-support) - CSSans Pro can work without CSS variables
 * [Accessibility](#accessibility) - Making sure everyone ca read the text
 
 ## Getting Started
 
 First, grab these 2 files from the repo:
-/dist/cssans.min.css
-/dist/cssans.min.js
+* /dist/cssans.min.css
+* /dist/cssans.min.js
 
 Then setup some test code:
 ```html
