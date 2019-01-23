@@ -16,7 +16,7 @@
   * [Align: center](#align-center)
   * [Align: right](#align-right)
   * [Italic (slanted text)](#italic-slanted)
-* [IE support](#ie-support) - CSSans Pro *can* work without CSS variables
+* [IE & co.](#ie-support) - **CSSans Pro** can also work without CSS variables
 * [Accessibility](#accessibility) - Super, super, super important
 
 
@@ -52,8 +52,8 @@ Add in some example `HTML` markup:
 Here's a quick breakdown:
 * Each character is **a single element** with a class of `cssans:{character}`
 * Each word has it's own `.cssans__word` container. This will make sure your text is aligned and spaced properly.
-* For improved accessibility, you should add the original text in a `.cssans__accessible` container
-* CSSans provides options and built-in helper classes such as `.cssans--center`. [Go to Options](#options)
+* For improved accessibility, you should add the original text in a `.cssans__accessible` container. [Definitely read this](#accessibility)
+* **CSSans Pro** provides options and built-in helper classes such as `.cssans--center`. [See more Options](#options)
 
 
 ## Quick start - JavaScript version
@@ -152,7 +152,7 @@ Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__wor
 
 ## Accessibility
 
-CSSans Pro is made out of CSS shapes that screen readers and other assistive technologies cannot identify.
+**CSSans Pro** is made out of CSS shapes that screen readers and other assistive technologies cannot identify.
 
 In order to keep your site accessible, **please** use the built-in `.cssans__accesible` class. It's really easy, look:
 
