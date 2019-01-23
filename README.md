@@ -76,9 +76,9 @@ to see what's going on in there. Nothing much, really!
 
 ### Colors
 
-The color pallete is controlled by 5 CSS variables written as `--cssans-*which*: *r*, *g*, *b*`. 
+The color pallete is controlled by 5 CSS variables written as `--cssans-*whichcolor*: *r*, *g*, *b*`. 
 
-Note that we only need the color *values*, without the `rgb()` syntax.
+Note that we only need the color **values**, without the `rgb()` syntax.
 
 ```css
 --cssans-primary: 31, 51, 104;    // blue
@@ -91,7 +91,7 @@ Note that we only need the color *values*, without the `rgb()` syntax.
 ### Letter spacing
 
 ```css
---cssans-letter-spacing: .1em;
+--cssans-letter-spacing: 0.1em;
 ```
 
 ### Word spacing
@@ -106,6 +106,41 @@ Note that we only need the color *values*, without the `rgb()` syntax.
 --cssans-line-height: 1.1em;
 ```
 
+### Align: center
 
+Use the `cssans--center` class on the container that holds your font markup.
+
+This class will make sure all letters align properly in the middle of the container.
+Simply setting `text-align:center;` won't do quite as well since words are separated by margins.
+
+```html
+<div class="cssans--center">
+    <div class="cssans__word">...</div>
+</div>
+```
+
+### Align: right
+
+Use the `cssans--right` class on the container that holds your font markup.
+
+Just like with centering, this class will help you properly align text to the right side of the container.
+
+```html
+<div class="cssans--right">
+    <div class="cssans__word">...</div>
+</div>
+```
+
+### Italic (slanted)
+
+Use the `cssans--slanted` class on the container that holds your font markup to give it the font an italicized look.
+
+This class adds `transform: skew(-15deg);` to each `.cssans__word`.
+
+```html
+<div class="cssans--slanted">
+    <div class="cssans__word">...</div>
+</div>
+```
 
 
