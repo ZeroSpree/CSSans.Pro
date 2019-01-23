@@ -9,6 +9,13 @@
 * [Quick Start](#quick-start) - **Setup in under 1 minute**
 * [Quick Start - JavaScript version](#quick-start-javascript-version) - Let JS do the writing
 * [Options](#options) - Options, options, options
+    [Colors](#colors)
+    [Letter-spacing](#letter-spacing)
+    [Word-spacing](#word-spacing)
+    [Line-height](#line-height)
+    [Align: center](#align-center)
+    [Align: right](#align-right)
+    [Italic (slanted text)](#italic-slanted)
 * [IE support](#ie-support) - CSSans Pro *can* work without CSS variables
 * [Accessibility](#accessibility) - Super, super, super important
 
@@ -88,20 +95,20 @@ Note that we only need the color **values**, without the `rgb()` syntax.
 --cssans-accent3: 255, 216, 9;    // yellow
 ```
 
-### Letter spacing
+### Letter-spacing
 
 ```css
 --cssans-letter-spacing: 0.1em;
 ```
 
-### Word spacing
+### Word-spacing
 
 ```css
 --cssans-word-spacing: 1em;
 ```
 
 
-### Line height
+### Line-height
 ```css
 --cssans-line-height: 1.1em;
 ```
