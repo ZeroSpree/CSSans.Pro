@@ -2,6 +2,7 @@
   font-family: 'Shadows Into Light';
   font-style: normal;
   font-weight: 400;
+  font-display: auto;
   src: local('Shadows Into Light'), 
        local('ShadowsIntoLight'), 
        url(https://fonts.gstatic.com/s/shadowsintolight/v7/UqyNK9UOIntux_czAvDQx_ZcHqZXBNQzdcD_.woff) format('woff'),
@@ -30,7 +31,7 @@ header {
 }
 
 .cursive {
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Shadows Into Light',cursive,sans-serif;
 }
 
 @include mq(md) {
