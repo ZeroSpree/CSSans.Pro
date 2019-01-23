@@ -11,7 +11,7 @@
 * [Accessibility](#accessibility) - Making sure everyone ca read the text
 
 
-## Getting Started
+## Quick Start
 
 First, grab these 2 files from the repo:
 * /dist/cssans.min.css
@@ -34,7 +34,7 @@ Done!
 
 ## CSS only setup
 
-CSSans Pro is a CSS based font, therefore it can work even without any JavaScript!
+**CSSans Pro** is a CSS based font, therefore it can work even without any JavaScript!
 
 The `HTML` notation looks like this:
 
@@ -61,7 +61,7 @@ The `HTML` notation looks like this:
 
 Here's a quick breakdown:
 * Each character is a single element with a class of `cssans:{character}`
-* Each word has it' own cssans__word container. This will make sure your text is aligned and spaced properly.
+* Each word has it's own `.cssans__word` container. This will make sure your text is aligned and spaced properly.
 * For improved accessibility, you should keep the original text in a `.cssans__accessible` container
-* There are a few built-in helper classes such as `.cssans--center`, you can read about those [below](#customization)
+* There are a few built-in helper classes such as `.cssans--center`, you can read about them [below](#customization)
 
