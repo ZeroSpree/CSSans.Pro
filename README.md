@@ -16,8 +16,8 @@
   * [Align: center](#align-center)
   * [Align: right](#align-right)
   * [Italic (slanted text)](#italic-slanted)
-* [IE & co.](#ie-support) - **CSSans Pro** can also work without CSS variables
-* [Accessibility](#accessibility) - Super, super, super important
+* [Support for IE & co.](#ie-support) - It's just like **CSSans Pro**, but without CSS variables
+* [Accessibility](#accessibility) - Super, super important
 
 
 ## Quick Start
