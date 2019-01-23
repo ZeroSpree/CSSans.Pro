@@ -72,4 +72,40 @@ CSSans(element, text);
 to see what's going on in there. Nothing much, really!
 
 
+## Options
+
+### Colors
+
+The color pallete is controlled by 5 CSS variables written as `--cssans-*which*: *r*, *g*, *b*`. 
+
+Note that we only need the color *values*, without the `rgb()` syntax.
+
+```css
+--cssans-primary: 31, 51, 104;    // blue
+--cssans-secondary: 237, 21, 118; // pink
+--cssans-accent1: 43, 208, 247;   // light blue
+--cssans-accent2: 255, 92, 92;    // orange
+--cssans-accent3: 255, 216, 9;    // yellow
+```
+
+### Letter spacing
+
+```css
+--cssans-letter-spacing: .1em;
+```
+
+### Word spacing
+
+```css
+--cssans-word-spacing: 1em;
+```
+
+
+### Line height
+```css
+--cssans-line-height: 1.1em;
+```
+
+
+
 
