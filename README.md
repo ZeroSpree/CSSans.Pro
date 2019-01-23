@@ -1,8 +1,7 @@
 # CSSans Pro - The Colourful, Sassy, CSS Font
 
-> CSSans Pro is a made-for-fun CSS font by Andronache Izabela and Codrin Pavel.
-> It's developed using SCSS and makes use of CSS Custom Properties (a.k.a. CS variables).
-> Use at your own risk.
+> **CSSans Pro** is a made-for-fun project by Andronache Izabela and Codrin Pavel.
+> It's developed using SCSS and uses CSS Custom Properties (a.k.a. CSS variables).
 
 ## Table of Contents
 
