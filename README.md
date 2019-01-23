@@ -142,7 +142,7 @@ Just like with centering, this class will help you properly align text to the ri
 
 Use the `cssans--slanted` class on the container that holds your font markup to give it the font an italicized look.
 
-This class adds `transform: skew(-15deg);` to each `.cssans__word`.
+Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__word`, feel free to make your own 👍
 
 ```html
 <div class="cssans--slanted">
@@ -150,4 +150,12 @@ This class adds `transform: skew(-15deg);` to each `.cssans__word`.
 </div>
 ```
 
+## Accessibility
 
+CSSans Pro is made out of CSS shapes that screen readers and other assistive technologies cannot identify.
+
+In order to keep your site accessible, **please** use the built-in `.cssans__accesible` class. It's really easy, look:
+
+```html
+<div class="cssans__accessible">I can be read by a screen reader, hurray!</div>
+```
