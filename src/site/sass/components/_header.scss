@@ -10,22 +10,8 @@
     z-index: 1;
   }
 
-  .button {
-    color: $blue-secondary;
-    border-color: $blue-secondary;
-
-    &--full {
-      color: $blue;
-      background: $blue-secondary;
-    }
-  }
-
   @include mq(md) {
     padding-bottom: 160px;
-
-    .button {
-      display: inline-block;
-    }
   }
 }
 

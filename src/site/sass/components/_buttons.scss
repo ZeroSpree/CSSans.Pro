@@ -4,14 +4,28 @@
   line-height: 1.4;
   display: inline-block;
   font-weight: bold;
-  color: $blue;
-  border: 2px solid $blue;
+  color: $blue-secondary;
+  border: 2px solid currentColor;
   padding: 18px 20px;
   letter-spacing: 1px;
+  position: relative;
+
+  &:active {
+    top: 1px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $blue;
+    background: $white;
+    border-color: $white;
+    outline: 0;
+  }
 
   &--full {
-    color: $white;
-    background: $blue;
+    color: $blue;
+    background: $blue-secondary;
+    border-color: $blue-secondary;
   }
 
   @include mq(md) {

@@ -10,11 +10,18 @@
 
   .button {
     color: $white;
-    border-color: $white;
+
+    &:hover,
+    &:focus {
+      color: $white;
+      background: $orange-dark;
+      border-color: $orange-dark;
+    }
 
     &--full {
-      color: $orange;
+      color: $orange-dark;
       background: $white;
+      border-color: $white;
     }
   }
 
