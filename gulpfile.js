@@ -41,8 +41,9 @@ function clean() {
   return del(['_includes/assets/', 'dist', '_site', 'min']);
 }
 
-// CSS task
-function css() {
+// Main CSS task.
+// This watches both the site CSS and CSSans
+function cssSite() {
   return gulp
 
      // Dev version
@@ -52,6 +53,7 @@ function css() {
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest("./min/"))
+    .pipe(gulp.dest("./_site/min/")) /* Update _site for live reloading */
 
      // Prod version
     .pipe(rename({ suffix: ".min" }))
@@ -59,7 +61,8 @@ function css() {
     .pipe(gulp.dest("./_includes/assets/"));
 }
 
-// CSSans task, outputs to dist/folder
+// CSSans only task
+// outputs to dist/folder
 function cssans() {
   return gulp
     .src("./src/cssans/sass/**/*.scss")
@@ -84,19 +87,21 @@ function jekyll() {
 
 // Watch files
 function watchFiles() {
-  gulp.watch("./src/**/*", css);
+  gulp.watch("./src/site/sass/**/*", cssSite);
   gulp.watch("./src/cssans/sass/**/*", cssans);
   gulp.watch(
     [
-      "./_includes/**/*",
+      "./_includes/**/*.html",
       "./_layouts/**/*",
     ],
     gulp.series(jekyll, browserSyncReload)
   );
 }
 
-const watch = gulp.series(clean, css, cssans, jekyll, gulp.parallel(watchFiles, browserSync));
+const css = gulp.series(cssSite, cssans);
+const watch = gulp.series(clean, css, jekyll, gulp.parallel(watchFiles, browserSync));
 
 exports.clean = clean;
+exports.css = css;
 exports.default = watch;
 
