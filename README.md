@@ -153,7 +153,7 @@ Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__wor
 
 **CSSans Pro** is made out of CSS shapes that screen readers and other assistive technologies cannot identify.
 
-In order to keep your site accessible, **please** use the built-in `.cssans__accesible` class. It's really easy, look:
+In order to keep your site accessible, **please** use the built-in `.cssans__accessible` class. It's really easy, look:
 
 ```html
 <div class="cssans__accessible">I can be read by a screen reader, hurray!</div>
