@@ -1,6 +1,6 @@
 # CSSans Pro - The Colourful, Sassy, CSS Font
 
-<img width="100%" src="https://cssans.pro/cssans.pro.png" />
+<img src="https://cssans.pro/cssans.pro.png" />
 
 > **CSSans Pro** is a just-for-fun CSS project by [Andronache Izabela](https://www.instagram.com/izadraws/) and [Codrin Pavel](https://codrin.eu).
 
