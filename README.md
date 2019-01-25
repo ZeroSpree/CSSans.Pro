@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-* [Quick Start](#quick-start) - Get **CSSans Pro** and up running in seconds
+* [Quick Start](#quick-start) - Get **CSSans Pro** up and running in seconds
 * [Quick Start - JavaScript Version](#quick-start---javascript-version) - Let JS do the writing
 * [Options](#options)
   * [Custom Color](#colors)

@@ -5,11 +5,47 @@
 
   .cssans {
     &--small {
+      font-size: 12px;
+    }
+
+    &--medium {
+      font-size: 18px;
+    }
+
+    &--large {
+      font-size: 66px;
+    }
+  }
+}
+
+@include mq(md) {
+  .specimen .cssans {
+    &--small {
       font-size: 14px;
     }
 
     &--medium {
       font-size: 22px;
+    }
+
+    &--large {
+      font-size: 48px;
+    }
+  }
+}
+
+@include mq(lg) {
+  .specimen .cssans {
+    &--large {
+      font-size: 62px;
+    }
+  }
+}
+
+@include mq(xl) {
+  .specimen .cssans {
+    &--large {
+      font-size: 82px;
     }
   }
 }

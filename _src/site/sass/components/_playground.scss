@@ -4,7 +4,7 @@
   border: 1px solid #eee;
   border-radius: 10px 10px 0 0;
   background: $white;
-  margin-bottom: 136px;
+  margin-bottom: 56px;
   position: relative;
 
   &__notice {
@@ -99,7 +99,7 @@
   }
 
   #playground {
-    padding: 2em 16px;
+    padding: 2em 16px 1em;
     border-top: 0;
     zoom: .5;
     width: 100%;
@@ -158,3 +158,8 @@
   }
 }
 
+@include mq(md) {
+  .playground {
+    margin-bottom: 136px;
+  }
+}
