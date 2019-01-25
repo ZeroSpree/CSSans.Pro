@@ -10,6 +10,8 @@
     <meta name="msapplication-navbutton-color" content="#1f3368">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1f3368">
 
+    <link rel="canonical" href="{{ page.url | absolute_url }}" />
+
     {%- if site.is_production -%}
         <style>{% include assets/main.min.css %}</style>
     {%- else -%}
