@@ -10,6 +10,25 @@
     <meta name="msapplication-navbutton-color" content="#1f3368">
     <meta name="apple-mobile-web-app-status-bar-style" content="#1f3368">
 
+    <meta property="fb:admins" content="100000026051093"/>
+    <meta property="og:title" content="{{ site.title }}"/>
+    <meta property="og:url" content="{{ site.url }}"/>
+    <meta property="og:image" content="{{ site.splash | absolute_url }}" />
+    <meta property="og:image:width" content="1000" />
+    <meta property="og:image:height" content="480" />
+    <meta property="og:type" content="website"/>
+    <meta property="og:site_name" content="{{ site.title }}"/>
+    <meta property="og:description" content="{{ site.subtitle }}"/>
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="{{ site.url }}">
+    <meta name="twitter:title" content="{{ site.title }}">
+    <meta name="twitter:description" content="{{ site.subtitle }}">
+    <meta name="twitter:image" content="{{ site.splash | absolute_url }}">
+    <meta name="twitter:image:src" content="{{ site.splash | absolute_url }}"></head>
+    <meta name="twitter:image:width" content="1000" />
+    <meta name="twitter:image:height" content="480" />
+
     <link rel="canonical" href="{{ page.url | absolute_url }}" />
 
     {%- if site.is_production -%}
