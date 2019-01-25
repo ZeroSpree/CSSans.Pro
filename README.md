@@ -4,7 +4,7 @@
 
 ## Table of Contents
 
-* [Quick Start](#quick-start) - Get **CSSans Pro** up running in seconds
+* [Quick Start](#quick-start) - Get **CSSans Pro** and up running in seconds
 * [Quick Start - JavaScript Version](#quick-start---javascript-version) - Let JS do the writing
 * [Options](#options)
   * [Custom Color](#colors)
@@ -46,13 +46,13 @@ Add in some example `HTML` markup:
 </div>
 ```
 
-... and done!
+... profit!
 
 Here's a quick breakdown:
-* Each character is **a single element** with a class of `cssans:{character}`
-* Each word has it's own `.cssans__word` container. This will make sure your text is aligned and spaced properly.
+* Each character is **a single element** with a class of `cssans:CHAR`
+* Each individual word goes inside a `.cssans__word` container. This will make sure all text is being spaced properly.
 * For improved accessibility, you should add the original text in a `.cssans__accessible` container. [Definitely read this](#accessibility)
-* **CSSans Pro** provides options and built-in helper classes such as `.cssans--center`. [See more Options](#options)
+* **CSSans Pro** provides some options and built-in helper classes such as `.cssans--center`. [See more Options](#options)
 
 
 ## Quick start - JavaScript version
@@ -75,16 +75,16 @@ CSSans(element, text);
 
 > You can grab the unminified CSSans() function from 
 [`/_src/cssans/js/cssans.js`](https://github.com/ZeroSpree/CSSans.Pro/blob/master/_src/cssans/js/cssans.js) 
-to see what's going on in there. Nothing much, really!
+to see what's going on in there. Nothing much, really, feel free to make your own.
 
 
 ## Options
 
 ### Colors
 
-The color pallete is controlled by 5 CSS variables written as `--cssans-*whichcolor*: *r*, *g*, *b*`. 
+The color pallete is controlled by 5 CSS variables written as `--cssans-**WHICHCOLOR**: **R**, **G**, **B**`. 
 
-Note that we only need the color **values**, without the `rgb()` syntax.
+Note that the notation uses only the color **values**, without the `rgb()` syntax.
 
 ```css
 --cssans-primary: 31, 51, 104;    // blue
@@ -116,8 +116,8 @@ Note that we only need the color **values**, without the `rgb()` syntax.
 
 Use the `cssans--center` class on the container that holds your font markup.
 
-This class will make sure all letters align properly in the middle of the container.
-Simply setting `text-align:center;` won't do quite as well since words are separated by margins.
+This class will make sure all words align properly in the middle of the parent container.
+> Simply setting `text-align:center;` won't do quite as well since words are separated by margins.
 
 ```html
 <div class="cssans--center">
@@ -129,7 +129,7 @@ Simply setting `text-align:center;` won't do quite as well since words are separ
 
 Use the `cssans--right` class on the container that holds your font markup.
 
-Just like with centering, this class will help you properly align text to the right side of the container.
+This class will help you properly align text to the right side of the parent container.
 
 ```html
 <div class="cssans--right">
@@ -139,9 +139,9 @@ Just like with centering, this class will help you properly align text to the ri
 
 ### Italic (slanted)
 
-Use the `cssans--slanted` class on the container that holds your font markup to give it the font an italicized look.
+Use the `cssans--slanted` class on the container that holds your font markup to give the font an _italicized_ look.
 
-Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__word`, feel free to make your own 👍
+Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__word`. Feel free to experiment 👍
 
 ```html
 <div class="cssans--slanted">
