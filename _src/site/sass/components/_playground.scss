@@ -92,16 +92,18 @@
   }
 
   &__container {
+    display: table;
     min-height: 50vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
   }
 
   #playground {
-    padding: 2em 16px 1em;
+    padding: 1em 16px;
     border-top: 0;
     zoom: .5;
+    width: 100%;
+    display: table-cell;
+    vertical-align: middle;
     width: 100%;
   }
 
