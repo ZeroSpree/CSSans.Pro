@@ -18,4 +18,6 @@ function CSSans(el, text) {
 
     el.innerHTML = sansified;
     el.style.lineHeight = '0px';
+
+    return sansified;
 }

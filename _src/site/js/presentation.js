@@ -7,11 +7,11 @@ function getParam(parameterName) {
         if (tmp[0] === parameterName) result = decodeURIComponent(tmp[1]);
     }
     return result;
-}
+};
 
 var cssans = {
     playground : document.getElementById('playground'),
-    code : document.getElementById('code'),
+    codepen: document.getElementById('codepen'),
 
     controls : {
         text : document.getElementById('ctrl-text'),
@@ -44,6 +44,8 @@ var cssans = {
         } else {
             window.history.pushState('Text Change', text, '/?t='+text);
         }
+
+        cssans.setCode();
     },
 
     setTextFromParam : function () {
@@ -82,7 +84,18 @@ var cssans = {
             cssVarsOptions[property] = color;
         }
 
-        cssans.code.innerText = '.cssans {\n' + fontsize + colors + '}';
+        var html = '<!--\n  https://cssans.pro\n  Documentation: https://github.com/ZeroSpree/CSSans.Pro#readme \n-->\n<div class="cssans cssans--center">\n' + CSSans(cssans.playground, cssans.controls.text.value.trim()) + '\n</div>';
+
+        var data = {
+            title : 'CSSans Pro',
+            html  : html,
+            css : '/* Uses https://cssans.pro/dist/cssans.min.css */ \n\n.cssans {\n' + fontsize + colors + '  --cssans-letter-spacing: 0.1em;\n  --cssans-word-spacing: 1em;\n  --cssans-line-height: 1.1em;\n}',
+            layout: 'top',
+            tags: ['cssans pro', 'css', 'font'],
+            css_external : 'https://cssans.pro/dist/cssans.min.css'
+        };
+
+        cssans.codepen.value = JSON.stringify(data).replace(/"/g, "&​quot;").replace(/'/g, "&apos;");
 
         // Trigger CSS variables polyfill
         if (!cssans.checkVarsSupport()) {
@@ -115,7 +128,7 @@ var cssans = {
             CSSans(el, el.innerText);
         }
     }
-}
+};
 
 cssans.init();
 

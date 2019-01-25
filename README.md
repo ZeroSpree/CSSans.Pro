@@ -7,7 +7,7 @@
 * [Quick Start](#quick-start) - Get **CSSans Pro** up and running in seconds
 * [Quick Start - JavaScript Version](#quick-start---javascript-version) - Let JS do the writing
 * [Options](#options)
-  * [Custom Color](#colors)
+  * [Colors](#colors)
   * [Letter-Spacing](#letter-spacing)
   * [Word-Spacing](#word-spacing)
   * [Line-Height](#line-height)

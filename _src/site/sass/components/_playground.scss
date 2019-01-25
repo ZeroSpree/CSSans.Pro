@@ -107,8 +107,20 @@
     width: 100%;
   }
 
+  .post-to-codepen {
+    position: absolute;
+    bottom: 0;
+    right: 5px;
+
+    button {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
   @include mq(md) {
     margin-top: -160px;
+    margin-bottom: 136px;
 
     &__notice {
       font-size: 18px;
@@ -157,11 +169,15 @@
         order: 2;
       }
     }
+
+    .post-to-codepen {
+      right: 10px;
+
+      button {
+        width: 60px;
+        height: 60px;
+      }
+    }
   }
 }
 
-@include mq(md) {
-  .playground {
-    margin-bottom: 136px;
-  }
-}
