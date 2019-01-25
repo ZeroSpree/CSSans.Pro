@@ -1,12 +1,11 @@
 # CSSans Pro - The Colourful, Sassy, CSS Font
 
-> **CSSans Pro** is a made-for-fun project by Andronache Izabela and Codrin Pavel.
-> It's developed using SCSS and uses CSS Custom Properties (a.k.a. CSS variables).
+> **CSSans Pro** is a just-for-fun CSS project by [Andronache Izabela](https://www.instagram.com/izadraws/) and [Codrin Pavel](https://codrin.eu).
 
 ## Table of Contents
 
 * [Quick Start](#quick-start) - **Setup in under 1 minute**
-* [Quick Start - JavaScript version](#quick-start-javascript-version) - Let JS do the writing
+* [Quick Start - JavaScript version](#quick-start---javascript-version) - Let JS do the writing
 * [Options](#options) - Options, options, options
   * [Colors](#colors)
   * [Letter-spacing](#letter-spacing)
@@ -17,6 +16,7 @@
   * [Italic (slanted text)](#italic-slanted)
 * [Support for IE & co.](#ie-support) - It's just like **CSSans Pro**, but without CSS variables
 * [Accessibility](#accessibility) - Super, super important
+* [Customize](#customize) - Install locally and go crazy
 
 
 ## Quick Start
@@ -149,7 +149,20 @@ Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__wor
 </div>
 ```
 
+## IE support
+
+**CSSans Pro** can work on older browsers that don't support CSS Custom Properties. Here's a few ways to do that, pick the one that suits best:
+
+* Clone the repo locally and build your own version of `cssans.min.ie.css` or...
+
+* ...Use the IE compatible [`/dist/cssans.min.ie.css`](https://github.com/ZeroSpree/CSSans.Pro/blob/master/dist/cssans.min.ie.css) - 
+this file contains no CSS Variables, all the code is precompiled to normal CSS properties. Feel free to find all/replace all colors and spacings you'd like to customize.
+
+
+
 ## Accessibility
+
+> You don't need to read this if you use the `CSSans()` JavaScript function.
 
 **CSSans Pro** is made out of CSS shapes that screen readers and other assistive technologies cannot identify.
 
