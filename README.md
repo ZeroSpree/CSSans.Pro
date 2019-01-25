@@ -176,12 +176,19 @@ In order to keep your site accessible, **please** use the built-in `.cssans__acc
 ## Installation
 
 1 - You will need a working `Jekyll` environment and `NPM` installed on your machine. Make sure these are working on your system before proceeding.
+
 2 - Clone the repo
+
 3 - Install dependencies with `npm install`
+
 4 - Run `gulp`
 
 At this point, BrowserSync should open a new browser tab at `http://localhost:3000` and you're good to go!
+
 The repository contains all the files for **CSSans Pro**, as well as the presentation site.
+
 You can find the font files under `_src/cssans/sass/`. All the CSS Custom Properties are set in `_common.scss`.
+
 The `dist` directory should update on-the-fly as you update the files, so you can grab the minified `CSS` as soon as you finish editing.
+
 Have fun!
