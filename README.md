@@ -191,6 +191,6 @@ The repository contains all the files for **CSSans Pro**, as well as the present
 
 You can find the font files under `_src/cssans/sass/`. All the CSS Custom Properties are set in `_common.scss`.
 
-The `dist` directory should update on-the-fly as you update the files, so you can grab the minified `CSS` as soon as you finish editing.
+The `dist` directory should update on-the-fly as you update the files, so you can grab the minified files from the `_dist` folder as soon as you finish editing.
 
 Have fun!
