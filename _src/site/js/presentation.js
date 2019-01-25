@@ -88,6 +88,7 @@ var cssans = {
 
         var data = {
             title : 'CSSans Pro',
+            description: 'Learn more about CSSans Pro at [https://cssans.pro](https://cssans.pro).',
             html  : html,
             css : '/* Uses https://cssans.pro/dist/cssans.min.css */ \n\n.cssans {\n' + fontsize + colors + '  --cssans-letter-spacing: 0.1em;\n  --cssans-word-spacing: 1em;\n  --cssans-line-height: 1.1em;\n}',
             layout: 'top',
