@@ -4,17 +4,17 @@
 
 ## Table of Contents
 
-* [Quick Start](#quick-start) - **Setup in under 1 minute**
-* [Quick Start - JavaScript version](#quick-start---javascript-version) - Let JS do the writing
-* [Options](#options) - Options, options, options
-  * [Colors](#colors)
-  * [Letter-spacing](#letter-spacing)
-  * [Word-spacing](#word-spacing)
-  * [Line-height](#line-height)
-  * [Align: center](#align-center)
-  * [Align: right](#align-right)
+* [Quick Start](#quick-start) - Get **CSSans Pro** up running in seconds
+* [Quick Start - JavaScript Version](#quick-start---javascript-version) - Let JS do the writing
+* [Options](#options)
+  * [Custom Color](#colors)
+  * [Letter-Spacing](#letter-spacing)
+  * [Word-Spacing](#word-spacing)
+  * [Line-Height](#line-height)
   * [Italic (slanted text)](#italic-slanted)
-* [Support for IE & co.](#ie-support) - It's just like **CSSans Pro**, but without CSS variables
+  * [Alignment: Center](#align-center)
+  * [Alignment: Right](#align-right)
+* [Browser Support](#browser-support) - How to use without CSS variables
 * [Accessibility](#accessibility) - Super, super important
 * [Installation](#installation) - Instructions for running this repo locally
 
@@ -149,7 +149,7 @@ Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__wor
 </div>
 ```
 
-## IE support
+## Browser support
 
 **CSSans Pro** can work on older browsers that don't support CSS Custom Properties. Here's a few ways to do that, pick the one that suits best:
 
