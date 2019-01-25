@@ -11,7 +11,7 @@
     position: absolute;
     top: -32px;
     left: -10px;
-    color: $white;
+    color: $yellow;
     font-size: 16px;
 
     &::before {
@@ -19,22 +19,12 @@
       width: 100px;
       height: 75px;
       border: 1px dashed transparent;
-      border-left-color: $white;
-      border-bottom-color: $white;
+      border-left-color: $yellow;
+      border-bottom-color: $yellow;
       border-radius: 50%;
       position: absolute;
       left: -11px;
       top: 0;
-    }
-
-    &::after {
-      content: '';
-      border: 4px solid transparent;
-      border-top-color: $white;
-      position: absolute;
-      top: 60px;
-      left: 5px;
-      transform: rotate(-90deg);
     }
   }
 
