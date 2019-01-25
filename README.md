@@ -16,7 +16,7 @@
   * [Italic (slanted text)](#italic-slanted)
 * [Support for IE & co.](#ie-support) - It's just like **CSSans Pro**, but without CSS variables
 * [Accessibility](#accessibility) - Super, super important
-* [Customize](#customize) - Install locally and go crazy
+* [Installation](#installation) - Instructions for running this repo locally
 
 
 ## Quick Start
@@ -153,9 +153,9 @@ Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__wor
 
 **CSSans Pro** can work on older browsers that don't support CSS Custom Properties. Here's a few ways to do that, pick the one that suits best:
 
-* Clone the repo locally and build your own version of `cssans.min.ie.css` or...
+* [Install](#installation) the repo locally and build your own version of `cssans.min.ie.css` or...
 
-* ...Use the IE compatible [`/dist/cssans.min.ie.css`](https://github.com/ZeroSpree/CSSans.Pro/blob/master/dist/cssans.min.ie.css) - 
+* ...Use the prebuilt IE compatible version of **CSSans Pro** [`/dist/cssans.min.ie.css`](https://github.com/ZeroSpree/CSSans.Pro/blob/master/dist/cssans.min.ie.css) - 
 this file contains no CSS Variables, all the code is precompiled to normal CSS properties. Feel free to find all/replace all colors and spacings you'd like to customize.
 
 
@@ -171,3 +171,17 @@ In order to keep your site accessible, **please** use the built-in `.cssans__acc
 ```html
 <div class="cssans__accessible">I can be read by a screen reader, hurray!</div>
 ```
+
+
+## Installation
+
+1 - You will need a working `Jekyll` environment and `NPM` installed on your machine. Make sure these are working on your system before proceeding.
+2 - Clone the repo
+3 - Install dependencies with `npm install`
+4 - Run `gulp`
+
+At this point, BrowserSync should open a new browser tab at `http://localhost:3000` and you're good to go!
+The repository contains all the files for **CSSans Pro**, as well as the presentation site.
+You can find the font files under `_src/cssans/sass/`. All the CSS Custom Properties are set in `_common.scss`.
+The `dist` directory should update on-the-fly as you update the files, so you can grab the minified `CSS` as soon as you finish editing.
+Have fun!
