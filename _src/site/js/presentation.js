@@ -84,7 +84,7 @@ var cssans = {
             cssVarsOptions[property] = color;
         }
 
-        var html = '<!--\n  https://cssans.pro\n  Documentation: https://github.com/ZeroSpree/CSSans.Pro#readme \n-->\n<div class="cssans cssans--center">\n' + CSSans(cssans.playground, cssans.controls.text.value.trim()) + '\n</div>';
+        var html = '<!--\n  Website: https://cssans.pro\n  Documentation: https://github.com/ZeroSpree/CSSans.Pro#readme \n  Follow me: https://codepen.io/zerospree/\n-->\n<div class="cssans cssans--center">\n' + CSSans(cssans.playground, cssans.controls.text.value.trim()) + '\n</div>';
 
         var data = {
             title : 'CSSans Pro',
