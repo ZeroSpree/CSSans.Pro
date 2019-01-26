@@ -1,6 +1,8 @@
 # CSSans Pro - The Colourful, Sassy, CSS Font
 
-<img src="https://cssans.pro/cssans.pro.jpg" />
+<a target="_blank" href="https://cssans.pro">
+    <img src="https://cssans.pro/cssans.pro.jpg" />
+</a>
 
 > **CSSans Pro** is a just-for-fun CSS project by [Andronache Izabela](https://www.instagram.com/izadraws/) and [Codrin Pavel](https://codrin.eu).
 
@@ -86,7 +88,7 @@ to see what's going on in there. Nothing much, really, feel free to make your ow
 
 The color pallete is controlled by 5 CSS variables written as `--cssans-**WHICHCOLOR**: **R**, **G**, **B**`. 
 
-Note that the notation uses only the color **values**, without the `rgb()` syntax.
+This notation uses only the color **values**, without the `rgb()` syntax.
 
 ```css
 --cssans-primary: 31, 51, 104;    // blue
@@ -156,7 +158,7 @@ Note: this class literally adds `transform: skew(-15deg);` to each `.cssans__wor
 **CSSans Pro** can work on older browsers that don't support CSS Custom Properties. Here's a few ways to do that, pick the one that suits best:
 
 * Use the prebuilt IE compatible version of **CSSans Pro** [`/dist/cssans.min.ie.css`](https://github.com/ZeroSpree/CSSans.Pro/blob/master/dist/cssans.min.ie.css) - 
-this file contains no CSS Variables, all the code is precompiled to normal CSS properties. Feel free to find all/replace all colors and spacings you'd like to customize.
+this file contains no CSS Variables, all the code is precompiled to normal CSS properties. Feel free to find/replace all colors and spacings you'd like to customize.
 
 * [Install](#installation) the repo locally and build your own version of `cssans.min.ie.css` or...
 
