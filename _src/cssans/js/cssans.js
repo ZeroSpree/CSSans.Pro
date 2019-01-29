@@ -13,7 +13,6 @@ function CSSans(el, text) {
         sansified += (text[i] == ' ') ? '</div>' + wordBlock : '<b class="cssans:' + encodeURI(text[i]) + '"></b>';
     }
 
-    // Close the last wordBlock
     sansified += '</div>';
 
     el.innerHTML = sansified;

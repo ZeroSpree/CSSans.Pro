@@ -16,8 +16,7 @@ var cssans = {
     controls : {
         text : document.getElementById('ctrl-text'),
         fontsize : document.getElementById('ctrl-fontsize'),
-        colorInputs : document.getElementsByClassName('jscolor'),
-        align : document.getElementsByClassName('ctrl-align')
+        colorInputs : document.getElementsByClassName('jscolor')
     },
 
     checkVarsSupport : function() {
@@ -112,10 +111,6 @@ var cssans = {
         cssans.controls.fontsize.addEventListener('input', cssans.setFontSize);
         cssans.controls.fontsize.addEventListener('change', cssans.setFontSize);
 
-        for (var i = 0; i < cssans.controls.align.length; i++) {
-            cssans.controls.align[i].addEventListener('click', cssans.setAlignment);
-        }
-
         cssans.setCode();
         cssans.setTextFromParam();
         cssans.setText();
@@ -128,6 +123,7 @@ var cssans = {
             var el = els[i];
             CSSans(el, el.innerText);
         }
+
     }
 };
 
