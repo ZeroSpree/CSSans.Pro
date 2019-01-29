@@ -1,0 +1,434 @@
+.cssans\: {
+  // Symbol '!'
+  &\! {
+    width: 1em;
+
+    &::before {
+      width: 1em;
+      height: 2em;
+      background: RGB(var(--cssans-primary));
+    }
+
+    &::after {
+      width: 1em;
+      height: 1em;
+      bottom: 0;
+      border-top-right-radius: 1em;
+      background: RGB(var(--cssans-secondary));
+    }
+  }
+
+  // Symbol '?'
+  &\? {
+    &::before {
+      width: 2em;
+      height: 2em;
+      background-image: linear-gradient(90deg, RGB(var(--cssans-primary)) 1em, RGB(var(--cssans-accent1)) 1em), 
+                        linear-gradient(90deg, transparent 1em, RGB(var(--cssans-secondary)) 1em);
+      background-repeat: no-repeat;
+      background-size: 2em 1em;
+      background-position: 0 0, 0 1em;
+      border-radius: 1em;
+    }
+
+    &::after {
+      width: 1em;
+      height: 2em;
+      background-image: linear-gradient(0deg, RGB(var(--cssans-secondary)) 1em, RGB(var(--cssans-primary)) 1em);
+      border-top-left-radius: 1em;
+      bottom: 0;
+    }
+  }
+
+  // Symbol '.'
+  &\. {
+    width: 1em;
+
+    &::before {
+      width: 1em;
+      height: 1em;
+      top: 2em;
+      background: RGB(var(--cssans-secondary));
+    }
+  }
+
+  // Symbol ','
+  &\, {
+    @extend .cssans\:\.;
+
+    &::before {
+      border-bottom-right-radius: 1em;
+    }
+  }
+
+  // Symbol '''
+  &\' {
+    @extend .cssans\:\,;
+
+    &::before {
+      top: 0;
+    }
+  }
+
+  // Symbol '"'
+  &\%22 {
+    &::before,
+    &::after {
+      width: 1em;
+      height: 1em;
+      top: 0;
+      background: RGB(var(--cssans-secondary));
+      border-bottom-right-radius: 1em;
+    }
+
+    &::after {
+      right: 0;
+    }
+  }
+
+  // Symbol ':'
+  &\: {
+    width: 1em;
+
+    &::before {
+      width: 100%;
+      height: 2.5em;
+      top: .25em;
+      background-image: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))), 
+                        linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+      background-repeat: no-repeat;
+      background-size: 100% 1em;
+      background-position: 0 0, 0 1.5em;
+    }
+  }
+
+  // Symbol ';'
+  &\; {
+    @extend .cssans\:\:;
+
+    &::before {
+      background-image: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))), 
+                        linear-gradient(90deg, RGB(var(--cssans-secondary)), RGB(var(--cssans-secondary)));
+      border-bottom-right-radius: 1em;
+    }
+  }
+
+  // Symbol '*'
+  &\* {
+    background-image: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: .5em 2em;
+    background-position: .75em 0;
+
+    &::before,
+    &::after {
+      width: 2em;
+      height: .5em;
+      top: .75em;
+      background: RGB(var(--cssans-primary));
+      transform: rotate(33deg);
+    }
+
+    &::after {
+      transform: rotate(-33deg);
+    }
+  }
+
+  // Symbol '~'
+  &\~ {
+    &::before {
+      width: 2em;
+      height: 1em;
+      background: RGB(var(--cssans-secondary));
+      border-radius: 1em 0;
+    }
+  }
+
+  // Symbol '['
+  &\%5B {
+    width: 1.5em;
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))), 
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1.5em 1em, 1em 1em, 1.5em 1em;
+    background-position: 0 0, 0 1em, 0 2em;
+  }
+
+  // Symbol ']'
+  &\%5D {
+    @extend .cssans\:\%5B; // extends [
+
+    background-position: 0 0, .5em 1em, 0 2em;
+  }
+
+  // Symbol '('
+  &\( {
+    @extend .cssans\:\%5B; // extends [
+
+    border-radius: 1em 0 0 1em;
+  }
+
+  // Symbol ')'
+  &\) {
+    @extend .cssans\:\%5D; // extends ]
+
+    border-radius: 0 1em 1em 0;
+  }
+
+  // Symbol '{'
+  &\%7B {
+    width: 1.5em;
+
+    &::before,
+    &::after {
+      width: 100%;
+      height: 1.5em;
+      background: RGB(var(--cssans-primary));
+      border-radius: 0 0 100% 0;
+    }
+
+    &::after {
+      border-radius: 0 100% 0 0;
+      bottom: 0;
+    }
+  }
+
+  // Symbol '}'
+  &\%7D {
+    @extend .cssans\:\%7B; // extends {
+
+    &::before {
+      border-radius: 0 0 0 100%;
+    }
+
+    &::after {
+      border-radius: 100% 0 0 0;
+    }
+  }
+
+  // Symbol '_'
+  &\_ {
+    width: 3em;
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 3em 1em;
+    background-position: 0 2em;
+  }
+
+  // Symbol '-'
+  &\- {
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 2em 1em;
+    background-position: 0 1em;
+  }
+
+  // Symbol '='
+  &\= {
+    @extend .cssans\:\:;
+
+    width: 2em;
+  }
+
+  // Symbol '+'
+  &\+ {
+    width: 3em;
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 3em 1em, 1em 3em;
+    background-position: 0 1em, 1em 0;
+  }
+
+  // Symbol '<'
+  &\%3C {
+    &::before,
+    &::after {
+      width: 2em;
+      height: 1em;
+      background: RGB(var(--cssans-primary));
+      border-radius: 1em 0;
+      top: .5em;
+    }
+
+    &::after {
+      border-radius: 0 1em;
+      top: 1.5em;
+    }
+  }
+
+  // Symbol '>'
+  &\%3E {
+    @extend .cssans\:\%3C;
+
+    &::before {
+      border-radius: 0 1em;
+    }
+
+    &::after {
+      border-radius: 1em 0;
+    }
+  }
+
+  // Symbol '&'
+  &\& {
+    width: 2.5em;
+    height: .9em;
+    margin-top: 1.1em;
+    margin-bottom: .8em;
+    top: -1.3em;
+    background: RGB(var(--cssans-primary));
+    border-radius: 1em 0;
+
+    &::before {
+      width: 2.5em;
+      height: .9em;
+      background: RGB(var(--cssans-primary));
+      border-radius: 0 1em 0 1em;
+      bottom: -.8em;
+    }
+
+    &::after {
+      width: 1.6em;
+      height: 1.6em;
+      left: .15em;
+      background: RGB(var(--cssans-primary));
+      border-radius: 50%;
+      top: -1.1em;
+    }
+  }
+
+  // Symbol '$'
+  &\${
+    @extend .cssans\:s;
+
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 1em 1em;
+    background-position: .5em 0, .5em 3em;
+    height: 4em;
+    top: .5em;
+
+    &::before {
+      top: .5em;
+    }
+
+    &::after {
+      top: 1.5em;
+    }
+  }
+
+  // Symbol '#'
+  &\# {
+    width: 3em;
+    background: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))),
+                linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
+    background-repeat: no-repeat;
+    background-size: 3em 1em, 3em 1em, 1em 3em, 1em 3em;
+    background-position: 0 .4em, 0 1.6em, .4em , 1.6em 0;
+    transform: skew(-10deg);
+    margin-right: calc(.3em + var(--cssans-letter-spacing));
+    margin-left: .3em;
+  }
+
+  // Symbol '/'
+  &\/ {
+    width: 1em;
+    background: RGB(var(--cssans-primary));
+    transform: skew(-30deg);
+    margin-left: .9em;
+    margin-right: calc(.9em + var(--cssans-letter-spacing));
+  }
+
+  // Symbol '\'
+  &\%5C {
+    @extend .cssans\:\/;
+
+    transform: skew(30deg);
+  }
+
+  // Symbol '@'
+  // TODO
+  &\@ {
+    width: 3em;
+    border-radius: 50%;
+    background: RGB(var(--cssans-primary));
+    border: .25em solid RGB(var(--cssans-secondary));
+    border-right-color: transparent;
+    transform: rotate(45deg);
+
+    &::before {
+      width: 1.5em;
+      height: 1.5em;
+      top: .5em;
+      left: .5em;
+      background: linear-gradient(90deg, RGB(var(--cssans-accent1)), RGB(var(--cssans-accent1))),
+                  linear-gradient(90deg, RGB(var(--cssans-secondary)), RGB(var(--cssans-secondary)));
+      background-repeat: no-repeat;
+      background-size: .75em .75em, 1.5em 1.5em;
+      background-position: 0 0, 0 0;
+      border-radius: 1em 0 0 1em;
+      transform: rotate(-45deg);
+    }
+  }
+
+  // Symbol '`'
+  &\%60 {
+    @extend .cssans\:\';
+
+    &::before {
+      border-radius: 1em 0 0 0;
+    }
+  }
+
+  // Symbol '%'
+  &\%25 {
+    @extend .cssans\:\/;
+
+    &::before,
+    &::after {
+      width: 1em;
+      height: 1em;
+      background: RGB(var(--cssans-secondary));
+      border-radius: .5em;
+      transform: skew(30deg);
+      left: -1.3em;
+    }
+
+    &::after {
+      bottom: 0;
+      left: auto;
+      right: -1.3em;
+    }
+  }
+
+  // Symbol '^'
+  &\%5E {
+    width: 1em;
+
+    &::before,
+    &::after {
+      width: .5em;
+      height: 1em;
+      background: RGB(var(--cssans-primary));
+      border-radius: .5em 0;
+    }
+
+    &:after {
+      left: .5em;
+      border-radius: 0 .5em;
+    }
+  }
+
+  // Symbol '|'
+  &\%7C {
+    width: 1em;
+    height: 4em;
+    background: RGB(var(--cssans-primary));
+    top: .5em;
+  }
+}
