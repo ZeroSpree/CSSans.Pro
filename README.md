@@ -8,7 +8,7 @@
 
 ## Table of Contents
 
-* [All Characters & Classes](#overview)
+* [Characters & Classes](#overview)
 * [Quick Start](#quick-start) - Get **CSSans Pro** up and running in seconds
 * [Quick Start - JavaScript Version](#quick-start---javascript-version) - Let JS do the writing
 * [Options](#options)
@@ -24,13 +24,33 @@
 * [Installation](#installation) - Instructions for running this repo locally
 
 
-## All Characters & Classes
+## Characters & Classes
 
-* A `<b class="cssans:A"></b>`
-* B `<b class="cssans:B"></b>`
-* C `<b class="cssans:C"></b>`
-* D `<b class="cssans:D"></b>`
+#### Uppercase
+* A - Z `<b class="cssans:LETTER"></b>`
 
+#### Lowercase
+* a - z `<b class="cssans:letter"></b>`
+
+#### Numbers
+* 0 - 9 `<b class="cssans:NUMBER"></b>`
+
+#### Symbols
+* !~,.*()?@:;'-+=/&$#_ `<b class="cssans:CHARACTER"></b>`
+
+#### Escaped Symbols
+* \` `<b class="cssans:%60"></b>`
+* ^ `<b class="cssans:%5E"></b>`
+* % `<b class="cssans:%25"></b>`
+* [ `<b class="cssans:%5B"></b>`
+* ] `<b class="cssans:%5D"></b>`
+* { `<b class="cssans:%7B"></b>`
+* } `<b class="cssans:%7D"></b>`
+* " `<b class="cssans:%22"></b>`
+* < `<b class="cssans:%3C"></b>`
+* > `<b class="cssans:%3E"></b>`
+* \ `<b class="cssans:%5C"></b>`
+* | `<b class="cssans:%7C"></b>`
 
 ## Quick Start
 
