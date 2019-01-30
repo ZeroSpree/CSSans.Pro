@@ -42,7 +42,10 @@
 
         <form class="post-to-codepen" action="https://codepen.io/pen/define?editors=1100" method="POST" target="_blank">
           <input type="hidden" id="codepen" name="data" value='{"title": "New Pen!", "html": "<div>Hello, World!</div>"}'>
-          <button data-title="Preview in CodePen" type="submit">{{ icon-edit-on-codepen }}</button>
+          <button data-title="Preview in CodePen" type="submit">
+              {{ icon-edit-on-codepen }}
+              <div class="cssans__accessible">Preview in CodePen</div>
+          </button>
         </form>
     </div>
 </div>
