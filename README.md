@@ -8,7 +8,7 @@
 
 ## Table of Contents
 
-* [Characters & Classes](#overview)
+* [Overview - all characters & CSS classes](#overview)
 * [Quick Start](#quick-start) - Get **CSSans Pro** up and running in seconds
 * [Quick Start - JavaScript Version](#quick-start---javascript-version) - Let JS do the writing
 * [Options](#options)
@@ -24,7 +24,7 @@
 * [Installation](#installation) - Instructions for running this repo locally
 
 
-## Characters & Classes
+## Overview - all characters & CSS classes
 
 #### Uppercase
 * A - Z `<b class="cssans:LETTER"></b>`
