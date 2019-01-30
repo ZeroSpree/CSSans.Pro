@@ -7,7 +7,7 @@
 
 function CSSans(el, text) {
     var wordBlock = '<div class="cssans__word">';
-    var sansified = '<div class="cssans__accessible">' + text + '</div>' + wordBlock;
+    var sansified = '<div class="cssans__accessible">' + encodeURI(text) + '</div>' + wordBlock;
 
     for (var i in text) {
         sansified += (text[i] == ' ') ? '</div>' + wordBlock : '<b class="cssans:' + encodeURI(text[i]) + '"></b>';

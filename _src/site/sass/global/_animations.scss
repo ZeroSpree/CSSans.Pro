@@ -1,0 +1,33 @@
+.js--inview {
+  opacity: 0;
+  transform: translateY(15%);
+  transition: opacity .5s, transform .5s;
+  transition-delay: .5s;
+
+  &.playground {
+    transition-delay: 1s;
+  }
+
+  &.is-inview {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.specimen .cssans__word {
+  top: 40px;
+  opacity: 0;
+  transition: top .5s, opacity .5s;
+  transition-delay: .5s;
+
+  @for $i from 1 through 32 {
+    &:nth-child(#{$i}) {
+      transition-delay: $i*0.04 + .1s;
+    }
+  }
+
+  &.is-inview {
+    top: 0;
+    opacity: 1;
+  }
+}
