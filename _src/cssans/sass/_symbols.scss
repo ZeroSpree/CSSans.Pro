@@ -57,6 +57,7 @@
     @extend .cssans\:\.;
 
     &::before {
+      top: 2.5em;
       border-bottom-right-radius: 1em;
     }
   }
@@ -93,7 +94,7 @@
     &::before {
       width: 100%;
       height: 2.5em;
-      top: .25em;
+      top: .5em;
       background-image: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))), 
                         linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary)));
       background-repeat: no-repeat;
@@ -107,6 +108,7 @@
     @extend .cssans\:\:;
 
     &::before {
+      top: 1em;
       background-image: linear-gradient(90deg, RGB(var(--cssans-primary)), RGB(var(--cssans-primary))), 
                         linear-gradient(90deg, RGB(var(--cssans-secondary)), RGB(var(--cssans-secondary)));
       border-bottom-right-radius: 1em;
@@ -141,6 +143,7 @@
       height: 1em;
       background: RGB(var(--cssans-secondary));
       border-radius: 1em 0;
+      top: .5em;
     }
   }
 
@@ -229,6 +232,10 @@
     @extend .cssans\:\:;
 
     width: 2em;
+
+    &::before {
+      top: .25em;
+    }
   }
 
   // Symbol '+'
