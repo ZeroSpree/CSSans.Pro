@@ -9,14 +9,36 @@ function getParam(parameterName) {
     return result;
 };
 
+function httpGetAsync(theUrl, callback) {
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function() { 
+        if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+            callback(xmlHttp.responseText);
+    }
+    xmlHttp.open("GET", theUrl, true);
+    xmlHttp.send(null);
+}
+
 var cssans = {
     playground : document.getElementById('playground'),
     codepen: document.getElementById('codepen'),
+    filesize: document.getElementsByClassName('js--filesize'),
 
     controls : {
         text : document.getElementById('ctrl-text'),
         fontsize : document.getElementById('ctrl-fontsize'),
         colorInputs : document.getElementsByClassName('jscolor')
+    },
+
+    setFileSize : function () {
+        httpGetAsync('https://api.github.com/repositories/165513986/contents/dist/cssans.min.css', function(data) {
+            var oData = JSON.parse(data),
+                size = (oData.size/1024).toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
+
+            for(var i = 0; i < cssans.filesize.length; i++) {
+                cssans.filesize[i].innerText = size;
+            }
+        });
     },
 
     checkVarsSupport : function() {
@@ -123,6 +145,8 @@ var cssans = {
             var el = els[i];
             CSSans(el, el.innerText);
         }
+
+        cssans.setFileSize();
 
     }
 };
