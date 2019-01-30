@@ -53,4 +53,22 @@
       }
     }
   }
+
+  &__links {
+    margin-top: 5px;
+  }
+
+  &__link {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+
+    &:hover {
+      color: $orange-dark;
+    }
+  }
+
+  .align-right .footer__link {
+    margin: 0 0 0 10px;
+  }
 }

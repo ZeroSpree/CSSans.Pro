@@ -1,4 +1,5 @@
 $white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
 $blue: rgb(31, 51, 104);
 $blue-light: rgb(43, 208, 247);
 $blue-secondary: rgb(173, 185, 235);
@@ -15,7 +16,6 @@ $column-class: '.col';
 $column-count : 12;
 
 // Global site breakpoints
-// (!) Rememeber to edit $site-gutter and $grid-gutter as well
 $site-breakpoints : (
   sm: 0px,
   md: 768px,
@@ -24,7 +24,6 @@ $site-breakpoints : (
 );
 
 // Left-right spacings for site container
-// (!) keys must match $site-breakpoints
 $site-gutter : (
   sm: 20px,
   md: 32px,
@@ -33,7 +32,6 @@ $site-gutter : (
 );
 
 // Columns gutter spacings
-// (!) keys must match $site-breakpoints
 $column-gutter : (
   sm: 16px,
   md: 32px,

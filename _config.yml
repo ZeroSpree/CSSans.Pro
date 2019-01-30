@@ -4,7 +4,7 @@ is_production: true
 title: "CSSans Pro"
 subtitle: "The Colourful, Sassy, CSS Font"
 documentation: "https://github.com/ZeroSpree/CSSans.Pro#readme"
-download: "https://cssans.pro/dist/cssans.min.css"
+download: "https://github.com/ZeroSpree/CSSans.Pro/blob/master/dist/cssans.min.css"
 filesize: "27.5kb"
 splash: "cssans.pro.jpg"
 

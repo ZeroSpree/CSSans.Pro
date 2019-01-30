@@ -1,13 +1,14 @@
 # CSSans Pro - The Colourful, Sassy, CSS Font
 
 <a target="_blank" href="https://cssans.pro">
-    <img src="https://cssans.pro/cssans.pro.jpg" />
+    <img alt="Font specimen" src="https://cssans.pro/cssans.pro.jpg" />
 </a>
 
-> **CSSans Pro** is a just-for-fun CSS project by [Andronache Izabela](https://www.instagram.com/izadraws/) and [Codrin Pavel](https://codrin.eu).
+> **CSSans Pro** is a just-for-fun CSS project by [Andronache Izabela](https://www.instagram.com/izadraws/) and [Codrin Pavel](https://twitter.com/zerospree).
 
 ## Table of Contents
 
+* [All Characters & Classes](#overview)
 * [Quick Start](#quick-start) - Get **CSSans Pro** up and running in seconds
 * [Quick Start - JavaScript Version](#quick-start---javascript-version) - Let JS do the writing
 * [Options](#options)
@@ -21,6 +22,14 @@
 * [Browser Support](#browser-support) - How to use without CSS variables
 * [Accessibility](#accessibility) - Super, super important
 * [Installation](#installation) - Instructions for running this repo locally
+
+
+## All Characters & Classes
+
+* A `<b class="cssans:A"></b>`
+* B `<b class="cssans:B"></b>`
+* C `<b class="cssans:C"></b>`
+* D `<b class="cssans:D"></b>`
 
 
 ## Quick Start

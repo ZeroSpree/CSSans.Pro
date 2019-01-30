@@ -1,0 +1,30 @@
+@include mq(md) {
+  [data-title] {
+    position: relative;
+
+    &::before {
+      content: attr(data-title);
+      white-space: nowrap;
+      background: #333;
+      color: #fff;
+      position: absolute;
+      bottom: -34px;
+      left: 50%;
+      transform: translate(-50%, -25%);
+      font-family: monospace;
+      font-size: 13px;
+      line-height: 1;
+      padding: 4px 8px;
+      border-radius: 10px;
+      opacity: 0;
+      transition: all 150ms;
+      pointer-events: none;
+      text-transform: none;
+    }
+
+    &:hover::before {
+      opacity: 1;
+      transform: translate(-50%, 0%);
+    }
+  }
+}
