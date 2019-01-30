@@ -48,7 +48,7 @@
 * } `<b class="cssans:%7D"></b>`
 * " `<b class="cssans:%22"></b>`
 * < `<b class="cssans:%3C"></b>`
-* > `<b class="cssans:%3E"></b>`
+* \> `<b class="cssans:%3E"></b>`
 * \ `<b class="cssans:%5C"></b>`
 * | `<b class="cssans:%7C"></b>`
 
