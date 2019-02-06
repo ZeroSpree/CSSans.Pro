@@ -102,7 +102,7 @@ Add in some example `HTML` markup:
 Call `CSSans(element, text)` 
 ```javascript
 var element = document.getElementById('foo');
-var text = el.innerText;
+var text = element.innerText;
 CSSans(element, text);
 ```
 
