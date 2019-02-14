@@ -210,6 +210,7 @@ In order to keep your site accessible, **please** use the built-in `.cssans__acc
 ## Installation
 
 1. You will need a working [`Jekyll`](https://jekyllrb.com/) environment and [`NPM`](https://www.npmjs.com/) installed on your machine. 
+Once you have installed NPM, you will need to install `gulp` into your global root directory: `npm install -g gulp`.
 Make sure these are working on your system before proceeding.
 
 2. Clone the repo
