@@ -1,7 +1,7 @@
 # CSSans Pro - The Colourful, Sassy, CSS Font
 
-<a target="_blank" href="https://cssans.pro">
-    <img alt="Font specimen" src="https://cssans.pro/cssans.pro.jpg" />
+<a target="_blank" href="https://zerospree.github.io/CSSans.Pro/">
+    <img alt="Font specimen" src="https://zerospree.github.io/CSSans.Pro/cssans.pro.jpg" />
 </a>
 
 > **CSSans Pro** is a just-for-fun CSS project by [Andronache Izabela](https://www.instagram.com/izadraws/) and [Codrin Pavel](https://twitter.com/zerospree).
