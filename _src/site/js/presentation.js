@@ -87,7 +87,7 @@ var cssans = {
             css_external : 'https://zerospree.github.io/CSSans.Pro/dist/cssans.min.css'
         };
 
-        cssans.codepen.value = JSON.stringify(data).replace(/"/g, "&​quot;").replace(/'/g, "&apos;");
+        cssans.codepen.value = JSON.stringify(data).replace(/'/g, '&#39;');
 
         // Trigger CSS variables polyfill
         if (!cssans.checkVarsSupport()) {
