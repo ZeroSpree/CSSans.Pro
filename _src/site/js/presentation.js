@@ -37,13 +37,6 @@ var cssans = {
         var text = cssans.controls.text.value.trim();
 
         CSSans(cssans.playground, text);
-
-        if( text == 'CSSans Pro' || text == '' ) {
-            window.history.pushState('Initial', '', '/');
-        } else {
-            window.history.pushState('Text Change', text, '/?t='+text);
-        }
-
         cssans.setCode();
     },
 
