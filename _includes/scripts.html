@@ -1,7 +1,6 @@
 <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@1"></script>
 
 {%- if site.is_production -%}
-    <script>{% include assets/main.min.js %}</script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-133313583-1"></script>
@@ -11,9 +10,11 @@
       gtag('js', new Date());
       gtag('config', 'UA-133313583-1');
     </script>
-{%- else -%}
-    <script src="{{ "_src/cssans/js/cssans.js" | relative_url }}"></script>
-    <script src="{{ "_src/site/js/lib/jscolor.js" | relative_url }}"></script>
-    <script src="{{ "_src/site/js/lib/in-view.min.js" | relative_url }}"></script>
-    <script src="{{ "_src/site/js/presentation.js" | relative_url }}"></script>
 {%- endif -%}
+
+<script>    
+    {% include _src/site/js/lib/jscolor.js %}
+    {% include _src/site/js/lib/in-view.min.js %}
+    {% include _src/cssans/js/cssans.js %}
+    {% include _src/site/js/presentation.js %}
+</script>
