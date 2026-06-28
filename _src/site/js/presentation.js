@@ -76,16 +76,15 @@ var cssans = {
             cssVarsOptions[property] = color;
         }
 
-        var html = '<!--\n  Website: https://cssans.pro\n  Documentation: https://github.com/ZeroSpree/CSSans.Pro#readme \n  Follow me: https://codepen.io/zerospree/\n-->\n<div class="cssans cssans--center">\n' + CSSans(cssans.playground, cssans.controls.text.value.trim()) + '\n</div>';
+        var html = '<!--\n  Website: https://github.com/ZeroSpree/CSSans.Pro\n  Documentation: https://github.com/ZeroSpree/CSSans.Pro#readme \n  Follow me: https://codepen.io/zerospree/\n-->\n<div class="cssans cssans--center">\n' + CSSans(cssans.playground, cssans.controls.text.value.trim()) + '\n</div>';
 
         var data = {
             title : 'CSSans Pro',
-            description: 'Learn more about CSSans Pro at [https://cssans.pro](https://cssans.pro).',
+            description: 'Learn more about CSSans Pro at [https://github.com/ZeroSpree/CSSans.Pro](https://github.com/ZeroSpree/CSSans.Pro)',
             html  : html,
-            css : '/* Uses https://cssans.pro/dist/cssans.min.css */ \n\n.cssans {\n' + fontsize + colors + '  --cssans-letter-spacing: 0.1em;\n  --cssans-word-spacing: 1em;\n  --cssans-line-height: 1.1em;\n}',
+            css : '/* Uses https://zerospree.github.io/CSSans.Pro/dist/cssans.min.css */ \n\n.cssans {\n' + fontsize + colors + '  --cssans-letter-spacing: 0.1em;\n  --cssans-word-spacing: 1em;\n  --cssans-line-height: 1.1em;\n}',
             layout: 'top',
-            tags: ['cssans pro', 'css', 'font'],
-            css_external : 'https://cssans.pro/dist/cssans.min.css'
+            css_external : 'https://zerospree.github.io/CSSans.Pro/dist/cssans.min.css'
         };
 
         cssans.codepen.value = JSON.stringify(data).replace(/"/g, "&​quot;").replace(/'/g, "&apos;");
